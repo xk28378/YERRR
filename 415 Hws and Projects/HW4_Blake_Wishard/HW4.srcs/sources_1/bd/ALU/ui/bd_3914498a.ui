@@ -1,0 +1,48 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.67855",
+   "Default View_TopLeft":"-517,-190",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0.21  2019-05-29 bk=1.5064 VDI=41 GEI=36 GUI=JA:9.0 non-TLS
+#  -string -flagsOSRD
+preplace port AVALID -pg 1 -lvl 0 -x 0 -y 80 -defaultsOSRD
+preplace port BVALID -pg 1 -lvl 0 -x 0 -y 140 -defaultsOSRD
+preplace port clk -pg 1 -lvl 0 -x 0 -y 160 -defaultsOSRD
+preplace port QVALID -pg 1 -lvl 3 -x 770 -y 140 -defaultsOSRD
+preplace portBus A -pg 1 -lvl 0 -x 0 -y 60 -defaultsOSRD
+preplace portBus B -pg 1 -lvl 0 -x 0 -y 120 -defaultsOSRD
+preplace portBus Q -pg 1 -lvl 3 -x 770 -y 90 -defaultsOSRD
+preplace portBus S -pg 1 -lvl 3 -x 770 -y 280 -defaultsOSRD
+preplace portBus D -pg 1 -lvl 3 -x 770 -y 420 -defaultsOSRD
+preplace portBus P -pg 1 -lvl 3 -x 770 -y 560 -defaultsOSRD
+preplace portBus AND_OUT -pg 1 -lvl 3 -x 770 -y 690 -defaultsOSRD
+preplace portBus OR_OUT -pg 1 -lvl 3 -x 770 -y 810 -defaultsOSRD
+preplace portBus XOR_OUT -pg 1 -lvl 3 -x 770 -y 930 -defaultsOSRD
+preplace portBus MOD_OUT -pg 1 -lvl 3 -x 770 -y 1090 -defaultsOSRD
+preplace inst c_addsub_0 -pg 1 -lvl 1 -x 280 -y 350 -defaultsOSRD
+preplace inst c_addsub_1 -pg 1 -lvl 1 -x 280 -y 490 -defaultsOSRD
+preplace inst mult_gen_0 -pg 1 -lvl 1 -x 280 -y 630 -defaultsOSRD
+preplace inst or16_0 -pg 1 -lvl 1 -x 280 -y 880 -defaultsOSRD
+preplace inst xor16_0 -pg 1 -lvl 1 -x 280 -y 1000 -defaultsOSRD
+preplace inst div_gen_0 -pg 1 -lvl 1 -x 280 -y 160 -defaultsOSRD
+preplace inst mod16_0 -pg 1 -lvl 1 -x 280 -y 1120 -defaultsOSRD
+preplace inst and16_0 -pg 1 -lvl 1 -x 280 -y 760 -defaultsOSRD
+preplace netloc A_1 1 0 1 50 60n
+preplace netloc B_1 1 0 1 30 120n
+preplace netloc clk_1 1 0 1 20 160n
+preplace netloc c_addsub_0_S 1 1 2 NJ 350 640
+preplace netloc c_addsub_1_S 1 1 2 NJ 490 650
+preplace netloc mult_gen_0_P 1 1 2 NJ 630 640
+preplace netloc and16_0_Y 1 1 2 NJ 760 650
+preplace netloc or16_0_Y 1 1 2 NJ 880 640
+preplace netloc xor16_0_Y 1 1 2 NJ 1000 650
+preplace netloc AVALID_1 1 0 1 60 80n
+preplace netloc BVALID_1 1 0 1 40 140n
+preplace netloc div_gen_0_m_axis_dout_tdata 1 1 2 NJ 160 640
+preplace netloc div_gen_0_m_axis_dout_tvalid 1 1 2 NJ 180 650
+preplace netloc mod16_0_Y 1 1 2 NJ 1120 640
+levelinfo -pg 1 0 280 620 770
+pagesize -pg 1 -db -bbox -sgen -100 -240 930 1190
+"
+}
+0

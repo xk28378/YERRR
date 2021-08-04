@@ -1,0 +1,512 @@
+
+*** Running vivado
+    with args -log ISA.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ISA.tcl
+
+
+****** Vivado v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source ISA.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/nehmy/OneDrive/Desktop/ip_repo'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/nehmy/AppData/Roaming/Xilinx/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'.
+Command: synth_design -top ISA -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 7952 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 866.098 ; gain = 234.230
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'ISA' [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/imports/new/ISA.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Register_File' [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/imports/new/Register_File.v:23]
+WARNING: [Synth 8-6104] Input port 'WRITE_enable' has an internal driver [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/imports/new/Register_File.v:36]
+WARNING: [Synth 8-6104] Input port 'RS_enable' has an internal driver [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/imports/new/Register_File.v:37]
+WARNING: [Synth 8-6104] Input port 'RD_enable' has an internal driver [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/imports/new/Register_File.v:38]
+INFO: [Synth 8-6155] done synthesizing module 'Register_File' (1#1) [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/imports/new/Register_File.v:23]
+INFO: [Synth 8-6157] synthesizing module 'MUX' [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/imports/new/MUX.v:2]
+INFO: [Synth 8-6157] synthesizing module 'ALU' [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/bd/ALU/synth/ALU.v:13]
+INFO: [Synth 8-6157] synthesizing module 'ALU_and16_0_0' [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.runs/synth_1/.Xil/Vivado-10688-DESKTOP-KFAJ11H/realtime/ALU_and16_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ALU_and16_0_0' (2#1) [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.runs/synth_1/.Xil/Vivado-10688-DESKTOP-KFAJ11H/realtime/ALU_and16_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'ALU_c_addsub_0_0' [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.runs/synth_1/.Xil/Vivado-10688-DESKTOP-KFAJ11H/realtime/ALU_c_addsub_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ALU_c_addsub_0_0' (3#1) [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.runs/synth_1/.Xil/Vivado-10688-DESKTOP-KFAJ11H/realtime/ALU_c_addsub_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'ALU_c_addsub_1_0' [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.runs/synth_1/.Xil/Vivado-10688-DESKTOP-KFAJ11H/realtime/ALU_c_addsub_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ALU_c_addsub_1_0' (4#1) [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.runs/synth_1/.Xil/Vivado-10688-DESKTOP-KFAJ11H/realtime/ALU_c_addsub_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'ALU_div_gen_0_2' [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.runs/synth_1/.Xil/Vivado-10688-DESKTOP-KFAJ11H/realtime/ALU_div_gen_0_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ALU_div_gen_0_2' (5#1) [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.runs/synth_1/.Xil/Vivado-10688-DESKTOP-KFAJ11H/realtime/ALU_div_gen_0_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'ALU_mod16_0_0' [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.runs/synth_1/.Xil/Vivado-10688-DESKTOP-KFAJ11H/realtime/ALU_mod16_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ALU_mod16_0_0' (6#1) [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.runs/synth_1/.Xil/Vivado-10688-DESKTOP-KFAJ11H/realtime/ALU_mod16_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'ALU_mult_gen_0_0' [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.runs/synth_1/.Xil/Vivado-10688-DESKTOP-KFAJ11H/realtime/ALU_mult_gen_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ALU_mult_gen_0_0' (7#1) [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.runs/synth_1/.Xil/Vivado-10688-DESKTOP-KFAJ11H/realtime/ALU_mult_gen_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'ALU_or16_0_0' [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.runs/synth_1/.Xil/Vivado-10688-DESKTOP-KFAJ11H/realtime/ALU_or16_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ALU_or16_0_0' (8#1) [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.runs/synth_1/.Xil/Vivado-10688-DESKTOP-KFAJ11H/realtime/ALU_or16_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'ALU_xor16_0_0' [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.runs/synth_1/.Xil/Vivado-10688-DESKTOP-KFAJ11H/realtime/ALU_xor16_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ALU_xor16_0_0' (9#1) [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.runs/synth_1/.Xil/Vivado-10688-DESKTOP-KFAJ11H/realtime/ALU_xor16_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (10#1) [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/bd/ALU/synth/ALU.v:13]
+WARNING: [Synth 8-689] width (16) of port connection 'P' does not match port width (32) of module 'ALU' [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/imports/new/MUX.v:17]
+WARNING: [Synth 8-7023] instance 'ALU_intan' of module 'ALU' has 14 connections declared, but only 8 given [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/imports/new/MUX.v:17]
+WARNING: [Synth 8-3848] Net opcode in module/entity MUX does not have driver. [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/imports/new/MUX.v:15]
+INFO: [Synth 8-6155] done synthesizing module 'MUX' (11#1) [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/imports/new/MUX.v:2]
+WARNING: [Synth 8-689] width (1) of port connection 'ALU_OUTPUT' does not match port width (16) of module 'MUX' [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/imports/new/ISA.v:79]
+INFO: [Synth 8-6157] synthesizing module 'SSD' [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/imports/new/SSD.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'SSD' (12#1) [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/imports/new/SSD.v:23]
+WARNING: [Synth 8-689] width (7) of port connection 'AN0' does not match port width (8) of module 'SSD' [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/imports/new/ISA.v:85]
+WARNING: [Synth 8-689] width (7) of port connection 'AN1' does not match port width (8) of module 'SSD' [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/imports/new/ISA.v:86]
+WARNING: [Synth 8-689] width (7) of port connection 'AN2' does not match port width (8) of module 'SSD' [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/imports/new/ISA.v:87]
+WARNING: [Synth 8-689] width (7) of port connection 'AN3' does not match port width (8) of module 'SSD' [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/imports/new/ISA.v:88]
+WARNING: [Synth 8-689] width (7) of port connection 'AN4' does not match port width (8) of module 'SSD' [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/imports/new/ISA.v:89]
+WARNING: [Synth 8-689] width (7) of port connection 'AN5' does not match port width (8) of module 'SSD' [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/imports/new/ISA.v:90]
+WARNING: [Synth 8-689] width (7) of port connection 'AN6' does not match port width (8) of module 'SSD' [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/imports/new/ISA.v:91]
+WARNING: [Synth 8-689] width (7) of port connection 'AN7' does not match port width (8) of module 'SSD' [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/imports/new/ISA.v:92]
+INFO: [Synth 8-6157] synthesizing module 'Debounce_cb' [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/new/Debounce_cb.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Filter' [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/new/Debounce_cb.v:29]
+	Parameter wd bound to: 16 - type: integer 
+	Parameter n bound to: 65535 - type: integer 
+	Parameter bound bound to: 64000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Filter' (13#1) [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/new/Debounce_cb.v:29]
+INFO: [Synth 8-6157] synthesizing module 'Edge_Detector' [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/new/Debounce_cb.v:63]
+INFO: [Synth 8-6157] synthesizing module 'dff_resetless' [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/new/Debounce_cb.v:72]
+INFO: [Synth 8-6155] done synthesizing module 'dff_resetless' (14#1) [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/new/Debounce_cb.v:72]
+INFO: [Synth 8-6155] done synthesizing module 'Edge_Detector' (15#1) [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/new/Debounce_cb.v:63]
+INFO: [Synth 8-6155] done synthesizing module 'Debounce_cb' (16#1) [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/new/Debounce_cb.v:23]
+WARNING: [Synth 8-6090] variable 'AN' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/imports/new/ISA.v:102]
+WARNING: [Synth 8-6090] variable 'AN' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/imports/new/ISA.v:103]
+WARNING: [Synth 8-6090] variable 'AN' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/imports/new/ISA.v:104]
+WARNING: [Synth 8-6090] variable 'AN' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/imports/new/ISA.v:105]
+WARNING: [Synth 8-6090] variable 'AN' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/imports/new/ISA.v:106]
+WARNING: [Synth 8-6090] variable 'AN' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/imports/new/ISA.v:107]
+WARNING: [Synth 8-6090] variable 'AN' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/imports/new/ISA.v:108]
+WARNING: [Synth 8-6090] variable 'AN' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/imports/new/ISA.v:109]
+WARNING: [Synth 8-6014] Unused sequential element op_code_reg was removed.  [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/imports/new/ISA.v:110]
+WARNING: [Synth 8-3848] Net CT in module/entity ISA does not have driver. [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/imports/new/ISA.v:29]
+WARNING: [Synth 8-3848] Net WRITE_enable in module/entity ISA does not have driver. [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/imports/new/ISA.v:36]
+WARNING: [Synth 8-3848] Net RS_enable in module/entity ISA does not have driver. [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/imports/new/ISA.v:37]
+WARNING: [Synth 8-3848] Net RD_enable in module/entity ISA does not have driver. [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/imports/new/ISA.v:38]
+INFO: [Synth 8-6155] done synthesizing module 'ISA' (17#1) [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/imports/new/ISA.v:23]
+WARNING: [Synth 8-3331] design ISA has unconnected port CT[7]
+WARNING: [Synth 8-3331] design ISA has unconnected port CT[6]
+WARNING: [Synth 8-3331] design ISA has unconnected port CT[5]
+WARNING: [Synth 8-3331] design ISA has unconnected port CT[4]
+WARNING: [Synth 8-3331] design ISA has unconnected port CT[3]
+WARNING: [Synth 8-3331] design ISA has unconnected port CT[2]
+WARNING: [Synth 8-3331] design ISA has unconnected port CT[1]
+WARNING: [Synth 8-3331] design ISA has unconnected port CT[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 938.922 ; gain = 307.055
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 938.922 ; gain = 307.055
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 938.922 ; gain = 307.055
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 938.922 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/bd/ALU/ip/ALU_c_addsub_0_0/ALU_c_addsub_0_0/ALU_c_addsub_0_0_in_context.xdc] for cell 'mux/ALU_intan/c_addsub_0'
+Finished Parsing XDC File [c:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/bd/ALU/ip/ALU_c_addsub_0_0/ALU_c_addsub_0_0/ALU_c_addsub_0_0_in_context.xdc] for cell 'mux/ALU_intan/c_addsub_0'
+Parsing XDC File [c:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/bd/ALU/ip/ALU_c_addsub_1_0/ALU_c_addsub_1_0/ALU_c_addsub_1_0_in_context.xdc] for cell 'mux/ALU_intan/c_addsub_1'
+Finished Parsing XDC File [c:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/bd/ALU/ip/ALU_c_addsub_1_0/ALU_c_addsub_1_0/ALU_c_addsub_1_0_in_context.xdc] for cell 'mux/ALU_intan/c_addsub_1'
+Parsing XDC File [c:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/bd/ALU/ip/ALU_mult_gen_0_0/ALU_mult_gen_0_0/ALU_mult_gen_0_0_in_context.xdc] for cell 'mux/ALU_intan/mult_gen_0'
+Finished Parsing XDC File [c:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/bd/ALU/ip/ALU_mult_gen_0_0/ALU_mult_gen_0_0/ALU_mult_gen_0_0_in_context.xdc] for cell 'mux/ALU_intan/mult_gen_0'
+Parsing XDC File [c:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/bd/ALU/ip/ALU_and16_0_0/ALU_and16_0_0/ALU_and16_0_0_in_context.xdc] for cell 'mux/ALU_intan/and16_0'
+Finished Parsing XDC File [c:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/bd/ALU/ip/ALU_and16_0_0/ALU_and16_0_0/ALU_and16_0_0_in_context.xdc] for cell 'mux/ALU_intan/and16_0'
+Parsing XDC File [c:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/bd/ALU/ip/ALU_or16_0_0/ALU_or16_0_0/ALU_or16_0_0_in_context.xdc] for cell 'mux/ALU_intan/or16_0'
+Finished Parsing XDC File [c:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/bd/ALU/ip/ALU_or16_0_0/ALU_or16_0_0/ALU_or16_0_0_in_context.xdc] for cell 'mux/ALU_intan/or16_0'
+Parsing XDC File [c:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/bd/ALU/ip/ALU_xor16_0_0/ALU_xor16_0_0/ALU_xor16_0_0_in_context.xdc] for cell 'mux/ALU_intan/xor16_0'
+Finished Parsing XDC File [c:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/bd/ALU/ip/ALU_xor16_0_0/ALU_xor16_0_0/ALU_xor16_0_0_in_context.xdc] for cell 'mux/ALU_intan/xor16_0'
+Parsing XDC File [c:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/bd/ALU/ip/ALU_div_gen_0_2/ALU_div_gen_0_2/ALU_div_gen_0_2_in_context.xdc] for cell 'mux/ALU_intan/div_gen_0'
+Finished Parsing XDC File [c:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/bd/ALU/ip/ALU_div_gen_0_2/ALU_div_gen_0_2/ALU_div_gen_0_2_in_context.xdc] for cell 'mux/ALU_intan/div_gen_0'
+Parsing XDC File [c:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/bd/ALU/ip/ALU_mod16_0_0/ALU_mod16_0_0/ALU_mod16_0_0_in_context.xdc] for cell 'mux/ALU_intan/mod16_0'
+Finished Parsing XDC File [c:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/bd/ALU/ip/ALU_mod16_0_0/ALU_mod16_0_0/ALU_mod16_0_0_in_context.xdc] for cell 'mux/ALU_intan/mod16_0'
+Parsing XDC File [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/constrs_1/imports/Downloads/timing.xdc]
+Finished Parsing XDC File [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/constrs_1/imports/Downloads/timing.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/constrs_1/imports/Downloads/timing.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/ISA_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/ISA_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1066.945 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1066.945 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1066.945 ; gain = 435.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1066.945 ; gain = 435.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for mux/ALU_intan. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for mux/ALU_intan/c_addsub_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for mux/ALU_intan/c_addsub_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for mux/ALU_intan/mult_gen_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for mux/ALU_intan/and16_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for mux/ALU_intan/or16_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for mux/ALU_intan/xor16_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for mux/ALU_intan/div_gen_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for mux/ALU_intan/mod16_0. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1066.945 ; gain = 435.078
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4471] merging register 'AN2_reg[7:0]' into 'AN0_reg[7:0]' [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/imports/new/SSD.v:42]
+INFO: [Synth 8-4471] merging register 'AN3_reg[7:0]' into 'AN1_reg[7:0]' [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/imports/new/SSD.v:43]
+INFO: [Synth 8-4471] merging register 'AN6_reg[7:0]' into 'AN4_reg[7:0]' [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/imports/new/SSD.v:46]
+INFO: [Synth 8-4471] merging register 'AN7_reg[7:0]' into 'AN5_reg[7:0]' [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/imports/new/SSD.v:47]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1066.945 ; gain = 435.078
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 3     
+	                8 Bit    Registers := 6     
+	                4 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---RAMs : 
+	              256 Bit         RAMs := 1     
++---Muxes : 
+	  18 Input      8 Bit        Muxes := 4     
+	   2 Input      8 Bit        Muxes := 8     
+	  16 Input      8 Bit        Muxes := 4     
+	  15 Input      8 Bit        Muxes := 4     
+	   2 Input      4 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 13    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module ISA 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 2     
+	                4 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 4     
+Module Register_File 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 2     
++---RAMs : 
+	              256 Bit         RAMs := 1     
+Module MUX 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 7     
+Module SSD 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 4     
++---Muxes : 
+	  18 Input      8 Bit        Muxes := 4     
+	   2 Input      8 Bit        Muxes := 8     
+	  16 Input      8 Bit        Muxes := 4     
+	  15 Input      8 Bit        Muxes := 4     
+Module Filter 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+Module dff_resetless 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-4471] merging register 'button_debounce_cb/E/r1/q_reg' into 'button_debounce_cb/F/holder_reg' [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/new/Debounce_cb.v:79]
+WARNING: [Synth 8-3331] design ISA has unconnected port CT[7]
+WARNING: [Synth 8-3331] design ISA has unconnected port CT[6]
+WARNING: [Synth 8-3331] design ISA has unconnected port CT[5]
+WARNING: [Synth 8-3331] design ISA has unconnected port CT[4]
+WARNING: [Synth 8-3331] design ISA has unconnected port CT[3]
+WARNING: [Synth 8-3331] design ISA has unconnected port CT[2]
+WARNING: [Synth 8-3331] design ISA has unconnected port CT[1]
+WARNING: [Synth 8-3331] design ISA has unconnected port CT[0]
+INFO: [Synth 8-3886] merging instance 'AN_reg[1]' (FDSE) to 'AN_reg[2]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\AN_reg[2] )
+INFO: [Synth 8-3886] merging instance 'AN_reg[3]' (FDRE) to 'AN_reg[7]'
+INFO: [Synth 8-3886] merging instance 'AN_reg[4]' (FDRE) to 'AN_reg[7]'
+INFO: [Synth 8-3886] merging instance 'AN_reg[5]' (FDRE) to 'AN_reg[7]'
+INFO: [Synth 8-3886] merging instance 'AN_reg[6]' (FDRE) to 'AN_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\AN_reg[7] )
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin AN0[0] with 1st driver pin 'ssd/AN0_reg[0]/Q' [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/imports/new/SSD.v:40]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin AN0[0] with 2nd driver pin 'VCC' [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/imports/new/SSD.v:40]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net AN0[0] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/imports/new/SSD.v:40]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin AN3[0] with 1st driver pin 'ssd/AN1_reg[0]/Q' [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/imports/new/SSD.v:41]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin AN3[0] with 2nd driver pin 'GND' [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/imports/new/SSD.v:41]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net AN3[0] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/imports/new/SSD.v:41]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin AN4[0] with 1st driver pin 'ssd/AN4_reg[0]/Q' [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/imports/new/SSD.v:44]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin AN4[0] with 2nd driver pin 'GND' [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/imports/new/SSD.v:44]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net AN4[0] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/imports/new/SSD.v:44]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin AN5[0] with 1st driver pin 'ssd/AN5_reg[0]/Q' [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/imports/new/SSD.v:45]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin AN5[0] with 2nd driver pin 'GND' [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/imports/new/SSD.v:45]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net AN5[0] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.srcs/sources_1/imports/new/SSD.v:45]
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1066.945 ; gain = 435.078
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1066.945 ; gain = 435.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1066.945 ; gain = 435.078
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1066.945 ; gain = 435.078
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3295] tying undriven pin mux/ALU_intan:A[15] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin mux/ALU_intan:A[14] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin mux/ALU_intan:A[13] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin mux/ALU_intan:A[12] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin mux/ALU_intan:A[11] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin mux/ALU_intan:A[10] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin mux/ALU_intan:A[9] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin mux/ALU_intan:A[8] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin mux/ALU_intan:A[7] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin mux/ALU_intan:A[6] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin mux/ALU_intan:A[5] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin mux/ALU_intan:A[4] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin mux/ALU_intan:A[3] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin mux/ALU_intan:A[2] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin mux/ALU_intan:A[1] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin mux/ALU_intan:A[0] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin mux/ALU_intan:AVALID to constant 0
+WARNING: [Synth 8-3295] tying undriven pin mux/ALU_intan:B[15] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin mux/ALU_intan:B[14] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin mux/ALU_intan:B[13] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin mux/ALU_intan:B[12] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin mux/ALU_intan:B[11] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin mux/ALU_intan:B[10] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin mux/ALU_intan:B[9] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin mux/ALU_intan:B[8] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin mux/ALU_intan:B[7] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin mux/ALU_intan:B[6] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin mux/ALU_intan:B[5] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin mux/ALU_intan:B[4] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin mux/ALU_intan:B[3] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin mux/ALU_intan:B[2] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin mux/ALU_intan:B[1] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin mux/ALU_intan:B[0] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin mux/ALU_intan:BVALID to constant 0
+WARNING: [Synth 8-3295] tying undriven pin mux/ALU_intan:clk to constant 0
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1066.945 ; gain = 435.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1066.945 ; gain = 435.078
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1066.945 ; gain = 435.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1066.945 ; gain = 435.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1066.945 ; gain = 435.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1066.945 ; gain = 435.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+-----------------+----------+
+|      |BlackBox name    |Instances |
++------+-----------------+----------+
+|1     |ALU_and16_0_0    |         1|
+|2     |ALU_c_addsub_0_0 |         1|
+|3     |ALU_c_addsub_1_0 |         1|
+|4     |ALU_div_gen_0_2  |         1|
+|5     |ALU_mod16_0_0    |         1|
+|6     |ALU_mult_gen_0_0 |         1|
+|7     |ALU_or16_0_0     |         1|
+|8     |ALU_xor16_0_0    |         1|
++------+-----------------+----------+
+
+Report Cell Usage: 
++------+-----------------+------+
+|      |Cell             |Count |
++------+-----------------+------+
+|1     |ALU_and16_0_0    |     1|
+|2     |ALU_c_addsub_0_0 |     1|
+|3     |ALU_c_addsub_1_0 |     1|
+|4     |ALU_div_gen_0_2  |     1|
+|5     |ALU_mod16_0_0    |     1|
+|6     |ALU_mult_gen_0_0 |     1|
+|7     |ALU_or16_0_0     |     1|
+|8     |ALU_xor16_0_0    |     1|
+|9     |BUFG             |     1|
+|10    |CARRY4           |     4|
+|11    |LUT1             |     1|
+|12    |LUT2             |    15|
+|13    |LUT4             |     5|
+|14    |LUT5             |     2|
+|15    |LUT6             |     7|
+|16    |FDRE             |    18|
+|17    |IBUF             |     3|
+|18    |OBUF             |     8|
+|19    |OBUFT            |     8|
++------+-----------------+------+
+
+Report Instance Areas: 
++------+---------------------+------------+------+
+|      |Instance             |Module      |Cells |
++------+---------------------+------------+------+
+|1     |top                  |            |   233|
+|2     |  button_debounce_cb |Debounce_cb |    50|
+|3     |    F                |Filter      |    50|
+|4     |  mux                |MUX         |   161|
+|5     |    ALU_intan        |ALU         |   161|
++------+---------------------+------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1066.945 ; gain = 435.078
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 12 critical warnings and 43 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 1066.945 ; gain = 307.055
+Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1066.945 ; gain = 435.078
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1066.945 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1066.945 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+61 Infos, 80 Warnings, 12 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1066.945 ; gain = 728.227
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1066.945 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/nehmy/OneDrive/Desktop/HW4_Blake_Wishard/HW4.runs/synth_1/ISA.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file ISA_utilization_synth.rpt -pb ISA_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Apr  1 17:52:36 2021...

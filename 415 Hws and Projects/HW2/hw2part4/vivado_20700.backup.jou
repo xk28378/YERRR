@@ -1,0 +1,18 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Sun Feb 21 21:48:25 2021
+# Process ID: 20700
+# Current directory: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW2/hw2part4
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent21816 C:\Users\nehmy\OneDrive\Desktop\415 Hws and Projects\HW2\hw2part4\hw2part4.xpr
+# Log file: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW2/hw2part4/vivado.log
+# Journal file: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW2/hw2part4\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW2/hw2part4/hw2part4.xpr}
+update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config {C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW2/hw2part4/tb_part4_behav.wcfg}
+source tb_part4.tcl
+close_sim

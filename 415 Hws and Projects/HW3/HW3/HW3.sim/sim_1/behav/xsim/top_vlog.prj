@@ -1,0 +1,11 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../../../../Downloads/16bit files/Button_Debounce.v" \
+"../../../../../../../../Downloads/16bit files/pulser.v" \
+"../../../../HW3.srcs/sources_1/new/top.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

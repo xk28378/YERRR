@@ -1,0 +1,9 @@
+srcscan starts
+INFO: analyzing module and16 (VERI-9002)
+INFO: analyzing module mod16 (VERI-9002)
+INFO: analyzing module or16 (VERI-9002)
+INFO: analyzing module xor16 (VERI-9002)
+INFO: analyzing module register_file (VERI-9002)
+INFO: analyzing module ISA_decode (VERI-9002)
+INFO: analyzing module MUX (VERI-9002)
+srcscan exits with return value 0

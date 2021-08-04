@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1617051268">
+  <File Type="ROUTE-PWR" Name="ISA_decode_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="ISA_decode.tcl"/>
+  <File Type="BITSTR-BMM" Name="ISA_decode_bd.bmm"/>
+  <File Type="ROUTE-PWR-SUM" Name="ISA_decode_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="ISA_decode_reports.tcl"/>
+  <File Type="OPT-DCP" Name="ISA_decode_opt.dcp"/>
+  <File Type="OPT-DRC" Name="ISA_decode_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="ISA_decode.hwdef"/>
+  <File Type="PWROPT-DCP" Name="ISA_decode_pwropt.dcp"/>
+  <File Type="PLACE-DCP" Name="ISA_decode_placed.dcp"/>
+  <File Type="PLACE-IO" Name="ISA_decode_io_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="ISA_decode_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="ISA_decode_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="ISA_decode_control_sets_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="ISA_decode_incremental_reuse_pre_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="ISA_decode_postplace_pwropt.dcp"/>
+  <File Type="BG-BIN" Name="ISA_decode.bin"/>
+  <File Type="PHYSOPT-DCP" Name="ISA_decode_physopt.dcp"/>
+  <File Type="BITSTR-MSK" Name="ISA_decode.msk"/>
+  <File Type="ROUTE-ERROR-DCP" Name="ISA_decode_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="ISA_decode_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="ISA_decode_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="ISA_decode_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="ISA_decode_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="ISA_decode_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="ISA_decode_methodology_drc_routed.rpt"/>
+  <File Type="BITSTR-MMI" Name="ISA_decode.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="ISA_decode_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="ISA_decode_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="ISA_decode_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="ISA_decode_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="ISA_decode_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="ISA_decode_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="ISA_decode_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="ISA_decode_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-CLK" Name="ISA_decode_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="ISA_decode_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="ISA_decode_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="ISA_decode_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="ISA_decode_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="ISA_decode_postroute_physopt_bb.dcp"/>
+  <File Type="BG-BIT" Name="ISA_decode.bit"/>
+  <File Type="BITSTR-RBT" Name="ISA_decode.rbt"/>
+  <File Type="BITSTR-NKY" Name="ISA_decode.nky"/>
+  <File Type="PDI-FILE" Name="ISA_decode.pdi"/>
+  <File Type="RCFI_FILE" Name="ISA_decode.rcfi"/>
+  <File Type="CFI_FILE" Name="ISA_decode.cfi"/>
+  <File Type="RNPI_FILE" Name="ISA_decode.rnpi"/>
+  <File Type="NPI_FILE" Name="ISA_decode.npi"/>
+  <File Type="RBD_FILE" Name="ISA_decode.rbd"/>
+  <File Type="BITSTR-LTX" Name="ISA_decode.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="ISA_decode.sysdef"/>
+  <File Type="BG-BGN" Name="ISA_decode.bgn"/>
+  <File Type="BG-DRC" Name="ISA_decode.drc"/>
+  <File Type="RDI-RDI" Name="ISA_decode.vdi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/and16.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/or16.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/xor16.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/mod16.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/ALU/ALU.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/BCD_on.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/Debounce_cb.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/MUX.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/SSD.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/anode_control.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/cathode.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/clk_divider.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/refresh_clk.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/register_file.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/ISA_decode.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/single_port_mem.v">
+      <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/text_data.mem">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="ISA_decode"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/Downloads/timing.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../415 Hws and Projects/HW1/HW1.srcs/constrs_1/imports/Downloads/timing.xdc"/>
+        <Attr Name="ImportTime" Val="1612658807"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design" EnableStepBool="1"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="ALU_or16_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="ALU_xor16_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="ALU_mult_gen_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="ALU_and16_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="ALU_div_gen_0_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="ALU_c_addsub_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="ALU_c_addsub_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="ALU_mod16_0_0"/>
+</GenRun>

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Sun Apr 18 15:23:06 2021
+# Process ID: 1588
+# Current directory: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW5/HW5part2/HW5part2.sim/sim_1/behav/xsim
+# Command line: wbtcv.exe -mode batch -source C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW5/HW5part2/HW5part2.sim/sim_1/behav/xsim/xsim.dir/tb_part2_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW5/HW5part2/HW5part2.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW5/HW5part2/HW5part2.sim/sim_1/behav/xsim\webtalk.jou
+#-----------------------------------------------------------
+source C:/Users/nehmy/OneDrive/Desktop/415 -notrace

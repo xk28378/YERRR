@@ -1,0 +1,6 @@
+vhdl xil_defaultlib  \
+"../../../bd/ALU/ip/ALU_c_addsub_0_0/sim/ALU_c_addsub_0_0.vhd" \
+"../../../bd/ALU/ip/ALU_c_addsub_1_0/sim/ALU_c_addsub_1_0.vhd" \
+"../../../bd/ALU/ip/ALU_mult_gen_0_0/sim/ALU_mult_gen_0_0.vhd" \
+
+nosort

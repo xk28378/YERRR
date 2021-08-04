@@ -1,0 +1,16 @@
+srcscan starts
+INFO: analyzing module and16 (VERI-9002)
+INFO: analyzing module or16 (VERI-9002)
+INFO: analyzing module xor16 (VERI-9002)
+INFO: analyzing module mod16 (VERI-9002)
+INFO: analyzing module MUX (VERI-9002)
+INFO: analyzing module register_file (VERI-9002)
+INFO: analyzing module ISA_decode (VERI-9002)
+C:/Users/nehmy/AppData/Local/Temp/VivadoEditorAssist8280212658073450934.tmp(33): WARNING: data object 'rd_data' is already declared (VERI-2170)
+C:/Users/nehmy/AppData/Local/Temp/VivadoEditorAssist8280212658073450934.tmp(28): INFO: previous declaration of 'rd_data' is from here (VERI-1967)
+C:/Users/nehmy/AppData/Local/Temp/VivadoEditorAssist8280212658073450934.tmp(33): WARNING: second declaration of 'rd_data' ignored (VERI-1329)
+C:/Users/nehmy/AppData/Local/Temp/VivadoEditorAssist8280212658073450934.tmp(35): WARNING: data object 'rs_data' is already declared (VERI-2170)
+C:/Users/nehmy/AppData/Local/Temp/VivadoEditorAssist8280212658073450934.tmp(29): INFO: previous declaration of 'rs_data' is from here (VERI-1967)
+C:/Users/nehmy/AppData/Local/Temp/VivadoEditorAssist8280212658073450934.tmp(35): WARNING: second declaration of 'rs_data' ignored (VERI-1329)
+C:/Users/nehmy/AppData/Local/Temp/VivadoEditorAssist8280212658073450934.tmp(51): INFO: undeclared symbol SW, assumed default net type wire (VERI-9004)
+srcscan exits with return value 0

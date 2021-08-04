@@ -1,0 +1,96 @@
+Data_For_RDAFlowver5.0
+	top level‘S
+dbg_hub°O
+synthFileNamesJ
+10DC:/Xilinx/Vivado/2019.2/data/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhdG
+11AC:/Xilinx/Vivado/2019.2/data/vhdl/src/unimacro/BRAM_TDP_MACRO.vhdK
+12EC:/Xilinx/Vivado/2019.2/data/vhdl/src/unimacro/COUNTER_LOAD_MACRO.vhdI
+13CC:/Xilinx/Vivado/2019.2/data/vhdl/src/unimacro/COUNTER_TC_MACRO.vhdI
+14CC:/Xilinx/Vivado/2019.2/data/vhdl/src/unimacro/EQ_COMPARE_MACRO.vhdF
+20@C:/Xilinx/Vivado/2019.2/data/verilog/src/unimacro/ADDSUB_MACRO.vM
+15GC:/Xilinx/Vivado/2019.2/data/vhdl/src/unimacro/FIFO_DUALCLOCK_MACRO.vhdH
+21BC:/Xilinx/Vivado/2019.2/data/verilog/src/unimacro/BRAM_SDP_MACRO.vH
+16BC:/Xilinx/Vivado/2019.2/data/vhdl/src/unimacro/FIFO_SYNC_MACRO.vhdK
+22EC:/Xilinx/Vivado/2019.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.vC
+17=C:/Xilinx/Vivado/2019.2/data/vhdl/src/unimacro/MACC_MACRO.vhdC
+18=C:/Xilinx/Vivado/2019.2/data/vhdl/src/unimacro/MULT_MACRO.vhdH
+23BC:/Xilinx/Vivado/2019.2/data/verilog/src/unimacro/BRAM_TDP_MACRO.vG
+19AC:/Xilinx/Vivado/2019.2/data/verilog/src/unimacro/ADDMACC_MACRO.vL
+24FC:/Xilinx/Vivado/2019.2/data/verilog/src/unimacro/COUNTER_LOAD_MACRO.vJ
+25DC:/Xilinx/Vivado/2019.2/data/verilog/src/unimacro/COUNTER_TC_MACRO.vD
+30>C:/Xilinx/Vivado/2019.2/data/verilog/src/unimacro/MULT_MACRO.v
+NumFileNames71J
+26DC:/Xilinx/Vivado/2019.2/data/verilog/src/unimacro/EQ_COMPARE_MACRO.vJ
+31DC:/Xilinx/Vivado/2019.2/data/vhdl/src/unisims/retarget/MULT18X18.vhd=
+18C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_VCOMP.vhdN
+27HC:/Xilinx/Vivado/2019.2/data/verilog/src/unimacro/FIFO_DUALCLOCK_MACRO.vK
+32EC:/Xilinx/Vivado/2019.2/data/vhdl/src/unisims/retarget/MULT18X18S.vhd<
+27C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_VPKG.vhdI
+28CC:/Xilinx/Vivado/2019.2/data/verilog/src/unimacro/FIFO_SYNC_MACRO.v@
+33:C:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:
+35C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.vD
+29>C:/Xilinx/Vivado/2019.2/data/verilog/src/unimacro/MACC_MACRO.vF
+34@C:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv=
+48C:/Xilinx/Vivado/2019.2/scripts/rt/data/internal_cells.vÎ
+35Çc:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/.Xil/Vivado-15604-DESKTOP-KFAJ11H/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/xsdbm_v3_0_vl_rfs.vÝ
+40Öc:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/.Xil/Vivado-15604-DESKTOP-KFAJ11H/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bsid_ports.vh3
+5.C:/Xilinx/Vivado/2019.2/scripts/rt/data/BUFT.vÕ
+36Îc:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/.Xil/Vivado-15604-DESKTOP-KFAJ11H/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_in.vhÕ
+41Îc:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/.Xil/Vivado-15604-DESKTOP-KFAJ11H/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs.vhF
+6AC:/Xilinx/Vivado/2019.2/data/vhdl/src/unimacro/unimacro_VCOMP.vhdÖ
+37Ïc:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/.Xil/Vivado-15604-DESKTOP-KFAJ11H/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_i2x.vhÞ
+42×c:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/.Xil/Vivado-15604-DESKTOP-KFAJ11H/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vhE
+7@C:/Xilinx/Vivado/2019.2/data/vhdl/src/unimacro/ADDMACC_MACRO.vhdÖ
+38Ïc:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/.Xil/Vivado-15604-DESKTOP-KFAJ11H/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_icn.vhÚ
+43Óc:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/.Xil/Vivado-15604-DESKTOP-KFAJ11H/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_core.vhD
+8?C:/Xilinx/Vivado/2019.2/data/vhdl/src/unimacro/ADDSUB_MACRO.vhdÛ
+39Ôc:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/.Xil/Vivado-15604-DESKTOP-KFAJ11H/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ports.vhÙ
+44Òc:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/.Xil/Vivado-15604-DESKTOP-KFAJ11H/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_ext.vhÝ
+50Öc:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/.Xil/Vivado-15604-DESKTOP-KFAJ11H/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_id_vec_map.vhF
+9AC:/Xilinx/Vivado/2019.2/data/vhdl/src/unimacro/BRAM_SDP_MACRO.vhdá
+45Úc:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/.Xil/Vivado-15604-DESKTOP-KFAJ11H/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bsid_vec_ports.vhÎ
+51Çc:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/.Xil/Vivado-15604-DESKTOP-KFAJ11H/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/ltlib_v1_0_vl_rfs.vÙ
+46Òc:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/.Xil/Vivado-15604-DESKTOP-KFAJ11H/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_vec.vhÖ
+52Ïc:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/.Xil/Vivado-15604-DESKTOP-KFAJ11H/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/ltlib_v1_0_0_ver.vhÞ
+47×c:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/.Xil/Vivado-15604-DESKTOP-KFAJ11H/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vhÙ
+53Òc:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/.Xil/Vivado-15604-DESKTOP-KFAJ11H/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/ltlib_v1_0_0_lib_fn.vhÝ
+48Öc:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/.Xil/Vivado-15604-DESKTOP-KFAJ11H/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_sl_prt_map.vhÆ
+54¿c:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/.Xil/Vivado-15604-DESKTOP-KFAJ11H/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/synth/dbg_hub.vÙ
+49Òc:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/.Xil/Vivado-15604-DESKTOP-KFAJ11H/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/verilog/xsdbm_v3_0_0_id_map.vhØ
+60Ñc:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/.Xil/Vivado-15604-DESKTOP-KFAJ11H/dc_drv.0/dc/prj_ip.runs/dbg_hub_synth_1/vhdl_packages/1993/src/numeric_std.vhdÙ
+55Òc:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/.Xil/Vivado-15604-DESKTOP-KFAJ11H/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhdÓ
+61Ìc:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/.Xil/Vivado-15604-DESKTOP-KFAJ11H/dc_drv.0/dc/prj_ip.runs/dbg_hub_synth_1/vhdl_packages/1993/src/textio.vhdÝ
+56Öc:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/.Xil/Vivado-15604-DESKTOP-KFAJ11H/dc_drv.0/dc/prj_ip.srcs/sources_1/ip/dbg_hub/hdl/fifo_generator_v13_1_vhsyn_rfs.vhdÕ
+62Îc:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/.Xil/Vivado-15604-DESKTOP-KFAJ11H/dc_drv.0/dc/prj_ip.runs/dbg_hub_synth_1/vhdl_packages/1993/src/timing_p.vhd7
+571C:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_VCOMP.vhdÕ
+63Îc:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/.Xil/Vivado-15604-DESKTOP-KFAJ11H/dc_drv.0/dc/prj_ip.runs/dbg_hub_synth_1/vhdl_packages/1993/src/timing_b.vhdÕ
+58Îc:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/.Xil/Vivado-15604-DESKTOP-KFAJ11H/dc_drv.0/dc/prj_ip.runs/dbg_hub_synth_1/vhdl_packages/1993/src/std_1164.vhdÕ
+64Îc:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/.Xil/Vivado-15604-DESKTOP-KFAJ11H/dc_drv.0/dc/prj_ip.runs/dbg_hub_synth_1/vhdl_packages/1993/src/prmtvs_p.vhdÕ
+59Îc:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/.Xil/Vivado-15604-DESKTOP-KFAJ11H/dc_drv.0/dc/prj_ip.runs/dbg_hub_synth_1/vhdl_packages/1993/src/standard.vhdÕ
+70Îc:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/.Xil/Vivado-15604-DESKTOP-KFAJ11H/dc_drv.0/dc/prj_ip.runs/dbg_hub_synth_1/vhdl_packages/1993/src/syn_attr.vhdÕ
+65Îc:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/.Xil/Vivado-15604-DESKTOP-KFAJ11H/dc_drv.0/dc/prj_ip.runs/dbg_hub_synth_1/vhdl_packages/1993/src/prmtvs_b.vhdÕ
+66Îc:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/.Xil/Vivado-15604-DESKTOP-KFAJ11H/dc_drv.0/dc/prj_ip.runs/dbg_hub_synth_1/vhdl_packages/1993/src/syn_arit.vhdÕ
+67Îc:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/.Xil/Vivado-15604-DESKTOP-KFAJ11H/dc_drv.0/dc/prj_ip.runs/dbg_hub_synth_1/vhdl_packages/1993/src/syn_unsi.vhdÕ
+68Îc:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/.Xil/Vivado-15604-DESKTOP-KFAJ11H/dc_drv.0/dc/prj_ip.runs/dbg_hub_synth_1/vhdl_packages/1993/src/syn_sign.vhdÕ
+69Îc:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/.Xil/Vivado-15604-DESKTOP-KFAJ11H/dc_drv.0/dc/prj_ip.runs/dbg_hub_synth_1/vhdl_packages/1993/src/syn_misc.vhd
+
+synthStatsÄ
+synth_design
+Cputime0
+Threads used2
+Runtime0W
+argsO-verilog_define default::[not_specified] -top  dbg_hub -part  xc7a100tcsg324-1 
+	directive œ
+synth_design_metrics$
+mismatchedAddSubOperatorWidths-1
+lowMaxFanout-1
+NumUnregisteredPorts0
+caseNotFullNoDefault1
+	smallSrls-1
+srlsWithResetLogic-1
+shallowRAMWithAttribute-1
+hierMFO0
+bigRAMs-1
+NetsWithMixedFanouts-1
+DSPsWithKeep0
+RQS_Results

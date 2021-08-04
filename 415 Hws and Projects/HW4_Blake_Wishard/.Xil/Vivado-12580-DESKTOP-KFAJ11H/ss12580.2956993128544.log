@@ -1,0 +1,8 @@
+srcscan starts
+INFO: analyzing module ALU_xor16_0_0 (VERI-9002)
+INFO: analyzing module xor16 (VERI-9002)
+Listing tops:
+VeriTop library:xil_defaultlib mod:ALU_xor16_0_0
+END of tops
+c:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/sources_1/bd/ALU/ip/ALU_xor16_0_0/synth/ALU_xor16_0_0.v(58): INFO: compiling module 'ALU_xor16_0_0_default' (VERI-1018)
+srcscan exits with return value 0

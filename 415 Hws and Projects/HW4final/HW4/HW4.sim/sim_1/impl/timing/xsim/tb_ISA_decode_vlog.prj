@@ -1,0 +1,7 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"tb_ISA_decode_time_impl.v" \
+"../../../../../HW4.srcs/sim_1/new/tb_ISA_decode.v" \
+
+# Do not sort compile order
+nosort

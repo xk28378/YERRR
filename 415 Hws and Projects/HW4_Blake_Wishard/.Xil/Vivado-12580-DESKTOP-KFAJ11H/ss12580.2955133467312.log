@@ -1,0 +1,14 @@
+srcscan starts
+INFO: analyzing module ALU (VERI-9002)
+Listing tops:
+VeriTop library:xil_defaultlib mod:ALU
+END of tops
+C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/sources_1/bd/ALU/synth/ALU.v(13): INFO: compiling module 'ALU_default' (VERI-1018)
+C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/sources_1/bd/ALU/synth/ALU.v(68): WARNING: Module <ALU_and16_0_0> not found while processing module instance <and16_0> (VERI-1063)
+C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/sources_1/bd/ALU/synth/ALU.v(72): WARNING: Module <ALU_c_addsub_0_0> not found while processing module instance <c_addsub_0> (VERI-1063)
+C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/sources_1/bd/ALU/synth/ALU.v(77): WARNING: Module <ALU_c_addsub_1_0> not found while processing module instance <c_addsub_1> (VERI-1063)
+C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/sources_1/bd/ALU/synth/ALU.v(82): WARNING: Module <ALU_div_gen_0_0> not found while processing module instance <div_gen_0> (VERI-1063)
+C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/sources_1/bd/ALU/synth/ALU.v(90): WARNING: Module <ALU_mult_gen_0_0> not found while processing module instance <mult_gen_0> (VERI-1063)
+C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/sources_1/bd/ALU/synth/ALU.v(95): WARNING: Module <ALU_or16_0_0> not found while processing module instance <or16_0> (VERI-1063)
+C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/sources_1/bd/ALU/synth/ALU.v(99): WARNING: Module <ALU_xor16_0_0> not found while processing module instance <xor16_0> (VERI-1063)
+srcscan exits with return value 0

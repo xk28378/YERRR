@@ -1,0 +1,1804 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Sun Mar 28 23:47:38 2021
+# Process ID: 9804
+# Current directory: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14648 C:\Users\nehmy\OneDrive\Desktop\415 Hws and Projects\HW4Phase1 - 1\HW4Phase1\HW4\HW4.xpr
+# Log file: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/vivado.log
+# Journal file: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4\vivado.jou
+#-----------------------------------------------------------
+start_guiopen_project {C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.xpr}
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/ip_repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/nehmy/AppData/Roaming/Xilinx/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'.
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:user:ALU:1.0'. The one found in IP location 'c:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/ip_repo' will take precedence over the same IP in location c:/Users/nehmy/AppData/Roaming/Xilinx/ip_repo
+oopen_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:09 . Memory (MB): peak = 794.988 ; gain = 164.270update_compile_order -fileset sources_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.2
+  **** Build date : Nov  6 2019 at 22:12:23
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+****** Xilinx cs_server v2019.2.0
+  **** Build date : Nov 07 2019-00:28:22
+    ** Copyright 2017-2019 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:18 . Memory (MB): peak = 1166.781 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292A6E47CA
+set_property PROGRAM.FILE {C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/ISA_decode.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1435] Device xc7a100t (JTAG device index = 0) is not programmed (DONE status = 0).
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/ISA_decode.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_hw_manager
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Sun Mar 28 23:53:57 2021] Launched synth_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1/runme.log
+[Sun Mar 28 23:53:57 2021] Launched impl_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 2199.457 ; gain = 0.258
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.2
+  **** Build date : Nov  6 2019 at 22:12:23
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+****** Xilinx cs_server v2019.2.0
+  **** Build date : Nov 07 2019-00:28:22
+    ** Copyright 2017-2019 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:12 . Memory (MB): peak = 2199.457 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292A6E47CA
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/ISA_decode.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Sun Mar 28 23:58:41 2021] Launched synth_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1/runme.log
+[Sun Mar 28 23:58:41 2021] Launched impl_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 2206.848 ; gain = 0.000
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/ISA_decode.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Mar 29 00:03:05 2021] Launched synth_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1/runme.log
+[Mon Mar 29 00:03:05 2021] Launched impl_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 2206.848 ; gain = 0.000
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/ISA_decode.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Mar 29 00:07:02 2021] Launched synth_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1/runme.log
+[Mon Mar 29 00:07:02 2021] Launched impl_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 2207.090 ; gain = 0.242
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/ISA_decode.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_hw_manager
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Mar 29 00:16:34 2021] Launched synth_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1/runme.log
+[Mon Mar 29 00:16:35 2021] Launched impl_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.2
+  **** Build date : Nov  6 2019 at 22:12:23
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+****** Xilinx cs_server v2019.2.0
+  **** Build date : Nov 07 2019-00:28:22
+    ** Copyright 2017-2019 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 2212.316 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292A6E47CA
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210292A6E47CA
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292A6E47CA
+INFO: [Labtools 27-1435] Device xc7a100t (JTAG device index = 0) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/ISA_decode.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Mar 29 00:19:28 2021] Launched synth_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1/runme.log
+[Mon Mar 29 00:19:28 2021] Launched impl_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 2227.898 ; gain = 0.000
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/ISA_decode.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Mar 29 00:23:22 2021] Launched synth_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1/runme.log
+[Mon Mar 29 00:23:22 2021] Launched impl_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 2227.898 ; gain = 0.000
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/ISA_decode.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Mar 29 00:28:19 2021] Launched synth_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1/runme.log
+[Mon Mar 29 00:28:19 2021] Launched impl_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 2227.898 ; gain = 0.000
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/ISA_decode.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/ISA_decode.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Mar 29 00:32:46 2021] Launched synth_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1/runme.log
+[Mon Mar 29 00:32:46 2021] Launched impl_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:00 ; elapsed = 00:00:11 . Memory (MB): peak = 2227.898 ; gain = 0.000
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/ISA_decode.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'ISA_decode' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.sim/sim_1/behav/xsim/text_data.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj ISA_decode_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/sources_1/new/and16.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module and16
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/sources_1/new/or16.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module or16
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/sources_1/new/xor16.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xor16
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/sources_1/new/mod16.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mod16
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.ip_user_files/bd/ALU/ip/ALU_and16_0_0/sim/ALU_and16_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU_and16_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.ip_user_files/bd/ALU/ip/ALU_or16_0_0/sim/ALU_or16_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU_or16_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.ip_user_files/bd/ALU/ip/ALU_xor16_0_0/sim/ALU_xor16_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU_xor16_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.ip_user_files/bd/ALU/ip/ALU_mod16_0_0/sim/ALU_mod16_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU_mod16_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.ip_user_files/bd/ALU/sim/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/sources_1/new/BCD_on.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module BCD_on
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/sources_1/new/Debounce_cb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Debounce_cb
+INFO: [VRFC 10-311] analyzing module Filter
+INFO: [VRFC 10-311] analyzing module Edge_Detector
+INFO: [VRFC 10-311] analyzing module dff_resetless
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/sources_1/new/MUX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MUX
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/sources_1/new/SSD.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SSD
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/sources_1/new/anode_control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module anode_control
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/sources_1/new/cathode.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cathode
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/sources_1/new/clk_divider.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_divider
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/sources_1/new/refresh_clk.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module refresh_clk
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/sources_1/new/register_file.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/sources_1/new/ISA_decode.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ISA_decode
+INFO: [VRFC 10-2458] undeclared symbol wire_data_wire, assumed default net type wire [C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/sources_1/new/ISA_decode.v:58]
+"xvhdl --incr --relax -prj ISA_decode_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.sim/sim_1/behav/xsim'
+"xelab -wto 262eeb1de83c49b4b8cdba8c58c72745 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_utils_v3_0_10 -L c_reg_fd_v12_0_6 -L xbip_dsp48_wrapper_v3_0_4 -L xbip_pipe_v3_0_6 -L xbip_dsp48_addsub_v3_0_6 -L xbip_addsub_v3_0_6 -L c_addsub_v12_0_14 -L xbip_bram18k_v3_0_6 -L mult_gen_v12_0_16 -L axi_utils_v2_0_6 -L floating_point_v7_0_17 -L xbip_dsp48_mult_v3_0_6 -L xbip_dsp48_multadd_v3_0_6 -L div_gen_v5_1_16 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot ISA_decode_behav xil_defaultlib.ISA_decode xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 262eeb1de83c49b4b8cdba8c58c72745 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_utils_v3_0_10 -L c_reg_fd_v12_0_6 -L xbip_dsp48_wrapper_v3_0_4 -L xbip_pipe_v3_0_6 -L xbip_dsp48_addsub_v3_0_6 -L xbip_addsub_v3_0_6 -L c_addsub_v12_0_14 -L xbip_bram18k_v3_0_6 -L mult_gen_v12_0_16 -L axi_utils_v2_0_6 -L floating_point_v7_0_17 -L xbip_dsp48_mult_v3_0_6 -L xbip_dsp48_multadd_v3_0_6 -L div_gen_v5_1_16 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot ISA_decode_behav xil_defaultlib.ISA_decode xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 16 for port 'out' [C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/sources_1/new/ISA_decode.v:58]
+WARNING: [VRFC 10-3091] actual bit length 16 differs from formal bit length 32 for port 'P' [C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/sources_1/new/MUX.v:56]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package c_addsub_v12_0_14.c_addsub_v12_0_14_viv_comp
+Compiling package xbip_utils_v3_0_10.xbip_utils_v3_0_10_pkg
+Compiling package xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv_comp
+Compiling package xbip_addsub_v3_0_6.xbip_addsub_v3_0_6_viv_comp
+Compiling package c_addsub_v12_0_14.c_addsub_v12_0_14_pkg
+Compiling package c_addsub_v12_0_14.c_addsub_v12_0_14_pkg_legacy
+Compiling package c_reg_fd_v12_0_6.c_reg_fd_v12_0_6_viv_comp
+Compiling package unisim.vcomponents
+Compiling package div_gen_v5_1_16.div_gen_v5_1_16_viv_comp
+Compiling package axi_utils_v2_0_6.axi_utils_v2_0_6_pkg
+Compiling package ieee.math_real
+Compiling package axi_utils_v2_0_6.global_util_pkg
+Compiling package axi_utils_v2_0_6.axi_utils_comps
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package xbip_bram18k_v3_0_6.xbip_bram18k_v3_0_6_pkg
+Compiling package div_gen_v5_1_16.div_gen_pkg
+Compiling package ieee.std_logic_signed
+Compiling package div_gen_v5_1_16.pkg_addsub
+Compiling package mult_gen_v12_0_16.mult_gen_v12_0_16_viv_comp
+Compiling package mult_gen_v12_0_16.mult_gen_v12_0_16_pkg
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling module xil_defaultlib.register_file
+Compiling module xil_defaultlib.and16
+Compiling module xil_defaultlib.ALU_and16_0_0
+Compiling architecture structural of entity c_reg_fd_v12_0_6.c_reg_fd_v12_0_6_viv [\c_reg_fd_v12_0_6_viv(c_width=16...]
+Compiling architecture muxcy_v of entity unisim.MUXCY [muxcy_default]
+Compiling architecture xorcy_v of entity unisim.XORCY [xorcy_default]
+Compiling architecture rtl of entity c_addsub_v12_0_14.c_addsub_v12_0_14_lut6_legacy [\c_addsub_v12_0_14_lut6_legacy(c...]
+Compiling architecture synth of entity c_addsub_v12_0_14.c_addsub_v12_0_14_fabric_legacy [\c_addsub_v12_0_14_fabric_legacy...]
+Compiling architecture synth of entity c_addsub_v12_0_14.c_addsub_v12_0_14_legacy [\c_addsub_v12_0_14_legacy(c_fami...]
+Compiling architecture synth of entity c_addsub_v12_0_14.c_addsub_v12_0_14_viv [\c_addsub_v12_0_14_viv(c_xdevice...]
+Compiling architecture xilinx of entity c_addsub_v12_0_14.c_addsub_v12_0_14 [\c_addsub_v12_0_14(c_xdevicefami...]
+Compiling architecture alu_c_addsub_0_0_arch of entity xil_defaultlib.ALU_c_addsub_0_0 [alu_c_addsub_0_0_default]
+Compiling architecture rtl of entity c_addsub_v12_0_14.c_addsub_v12_0_14_lut6_legacy [\c_addsub_v12_0_14_lut6_legacy(c...]
+Compiling architecture synth of entity c_addsub_v12_0_14.c_addsub_v12_0_14_fabric_legacy [\c_addsub_v12_0_14_fabric_legacy...]
+Compiling architecture synth of entity c_addsub_v12_0_14.c_addsub_v12_0_14_legacy [\c_addsub_v12_0_14_legacy(c_fami...]
+Compiling architecture synth of entity c_addsub_v12_0_14.c_addsub_v12_0_14_viv [\c_addsub_v12_0_14_viv(c_xdevice...]
+Compiling architecture xilinx of entity c_addsub_v12_0_14.c_addsub_v12_0_14 [\c_addsub_v12_0_14(c_xdevicefami...]
+Compiling architecture alu_c_addsub_1_0_arch of entity xil_defaultlib.ALU_c_addsub_1_0 [alu_c_addsub_1_0_default]
+Compiling architecture synth of entity div_gen_v5_1_16.c_twos_comp_viv [\c_twos_comp_viv(c_width=16,c_ai...]
+Compiling architecture virtex of entity div_gen_v5_1_16.cmp2s_v [\cmp2s_v(c_bus_width=16,c_regist...]
+Compiling architecture synth of entity div_gen_v5_1_16.c_twos_comp_viv [\c_twos_comp_viv(c_width=16,c_ai...]
+Compiling architecture virtex of entity div_gen_v5_1_16.cmp2s_v [\cmp2s_v(c_bus_width=16,c_ainit_...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity div_gen_v5_1_16.c_addsub_lut6 [\c_addsub_lut6(c_width=17,c_add_...]
+Compiling architecture synth of entity div_gen_v5_1_16.c_addsub_viv [\c_addsub_viv(c_a_width=17,c_b_w...]
+Compiling architecture virtex of entity div_gen_v5_1_16.addsubreg_v [\addsubreg_v(c_bus_width=17,c_ai...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity div_gen_v5_1_16.c_addsub_lut6 [\c_addsub_lut6(c_width=17,c_add_...]
+Compiling architecture synth of entity div_gen_v5_1_16.c_addsub_viv [\c_addsub_viv(c_a_width=17,c_b_w...]
+Compiling architecture virtex of entity div_gen_v5_1_16.addsubreg_v [\addsubreg_v(c_bus_width=17,c_ha...]
+Compiling architecture virtex of entity div_gen_v5_1_16.dividervdc_v [\dividervdc_v(bus_num=16,bus_div...]
+Compiling architecture synth of entity div_gen_v5_1_16.c_twos_comp_viv [\c_twos_comp_viv(c_width=17,c_ai...]
+Compiling architecture virtex of entity div_gen_v5_1_16.cmp2s_v [\cmp2s_v(c_bus_width=17,c_regist...]
+Compiling architecture synth of entity div_gen_v5_1_16.bip_sdivider_synth [\bip_sdivider_synth(c_xdevicefam...]
+Compiling architecture synth of entity div_gen_v5_1_16.div_gen_synth [\div_gen_synth(c_xdevicefamily="...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity div_gen_v5_1_16.div_gen_v5_1_16_viv [\div_gen_v5_1_16_viv(c_xdevicefa...]
+Compiling architecture xilinx of entity div_gen_v5_1_16.div_gen_v5_1_16 [\div_gen_v5_1_16(c_xdevicefamily...]
+Compiling architecture alu_div_gen_0_2_arch of entity xil_defaultlib.ALU_div_gen_0_2 [alu_div_gen_0_2_default]
+Compiling module xil_defaultlib.mod16
+Compiling module xil_defaultlib.ALU_mod16_0_0
+Compiling architecture lut2_v of entity unisim.LUT2 [\LUT2(init="1000")(0,3)\]
+Compiling architecture mult_and_v of entity unisim.MULT_AND [mult_and_default]
+Compiling architecture xilinx of entity mult_gen_v12_0_16.op_resize [\op_resize(ao_width=19,bo_width=...]
+Compiling architecture xilinx of entity mult_gen_v12_0_16.luts [\luts(c_xdevicefamily="artix7",c...]
+Compiling architecture xilinx of entity mult_gen_v12_0_16.mult_gen_v12_0_16_viv [\mult_gen_v12_0_16_viv(c_verbosi...]
+Compiling architecture xilinx of entity mult_gen_v12_0_16.mult_gen_v12_0_16 [\mult_gen_v12_0_16(c_xdevicefami...]
+Compiling architecture alu_mult_gen_0_0_arch of entity xil_defaultlib.ALU_mult_gen_0_0 [alu_mult_gen_0_0_default]
+Compiling module xil_defaultlib.or16
+Compiling module xil_defaultlib.ALU_or16_0_0
+Compiling module xil_defaultlib.xor16
+Compiling module xil_defaultlib.ALU_xor16_0_0
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.MUX
+Compiling module xil_defaultlib.clk_divider
+Compiling module xil_defaultlib.refresh_clk
+Compiling module xil_defaultlib.anode_control
+Compiling module xil_defaultlib.BCD_on
+Compiling module xil_defaultlib.cathode
+Compiling module xil_defaultlib.SSD
+Compiling module xil_defaultlib.Filter(wd=16,n=65535,bound=64000...
+Compiling module xil_defaultlib.dff_resetless
+Compiling module xil_defaultlib.Edge_Detector
+Compiling module xil_defaultlib.Debounce_cb
+Compiling module xil_defaultlib.ISA_decode
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot ISA_decode_behav
+ERROR: [Common 17-165] Too many positional options when parsing '-notrace', please type 'webtalk -help' for usage info.
+
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 2243.371 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '9' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "ISA_decode_behav -key {Behavioral:sim_1:Functional:ISA_decode} -tclbatch {ISA_decode.tcl} -protoinst "protoinst_files/ALU.protoinst" -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/ALU.protoinst
+Time resolution is 1 ps
+source ISA_decode.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'ISA_decode_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:19 . Memory (MB): peak = 2364.379 ; gain = 136.480
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/ISA_decode.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Mar 29 00:42:08 2021] Launched synth_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1/runme.log
+[Mon Mar 29 00:42:08 2021] Launched impl_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 2364.379 ; gain = 0.000
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Mar 29 00:42:48 2021] Launched synth_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1/runme.log
+[Mon Mar 29 00:42:48 2021] Launched impl_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/ISA_decode.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Mar 29 00:50:46 2021] Launched synth_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1/runme.log
+[Mon Mar 29 00:50:46 2021] Launched impl_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/ISA_decode.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Mar 29 00:53:48 2021] Launched synth_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1/runme.log
+[Mon Mar 29 00:53:49 2021] Launched impl_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 2370.898 ; gain = 0.000
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1
+
+launch_runs synth_1 -jobs 4
+[Mon Mar 29 00:54:10 2021] Launched synth_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. PID not specified
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Mar 29 00:54:14 2021] Launched synth_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1/runme.log
+[Mon Mar 29 00:54:14 2021] Launched impl_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/ISA_decode.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Mar 29 01:01:23 2021] Launched synth_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1/runme.log
+[Mon Mar 29 01:01:23 2021] Launched impl_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 2370.898 ; gain = 0.000
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/ISA_decode.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Mar 29 01:06:06 2021] Launched synth_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1/runme.log
+[Mon Mar 29 01:06:06 2021] Launched impl_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/ISA_decode.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Mar 29 01:10:45 2021] Launched synth_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1/runme.log
+[Mon Mar 29 01:10:45 2021] Launched impl_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/ISA_decode.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Mar 29 01:14:50 2021] Launched synth_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1/runme.log
+[Mon Mar 29 01:14:50 2021] Launched impl_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/ISA_decode.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Mar 29 01:19:07 2021] Launched synth_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1/runme.log
+[Mon Mar 29 01:19:07 2021] Launched impl_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/runme.log
+open_bd_design {C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/sources_1/bd/ALU/ALU.bd}
+Adding component instance block -- xilinx.com:ip:c_addsub:12.0 - c_addsub_0
+Adding component instance block -- xilinx.com:ip:c_addsub:12.0 - c_addsub_1
+Adding component instance block -- xilinx.com:ip:mult_gen:12.0 - mult_gen_0
+Adding component instance block -- xilinx.com:module_ref:or16:1.0 - or16_0
+Adding component instance block -- xilinx.com:module_ref:xor16:1.0 - xor16_0
+Adding component instance block -- xilinx.com:ip:div_gen:5.1 - div_gen_0
+Adding component instance block -- xilinx.com:module_ref:mod16:1.0 - mod16_0
+Adding component instance block -- xilinx.com:module_ref:and16:1.0 - and16_0
+Successfully read diagram <ALU> from BD file <C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/sources_1/bd/ALU/ALU.bd>
+open_bd_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 2457.738 ; gain = 86.840
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Mar 29 01:20:46 2021] Launched synth_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1/runme.log
+[Mon Mar 29 01:20:46 2021] Launched impl_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/ISA_decode.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Mar 29 01:25:30 2021] Launched synth_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1/runme.log
+[Mon Mar 29 01:25:30 2021] Launched impl_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 2473.348 ; gain = 0.293
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/ISA_decode.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Mar 29 01:33:28 2021] Launched synth_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1/runme.log
+[Mon Mar 29 01:33:28 2021] Launched impl_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 2473.602 ; gain = 0.254
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/ISA_decode.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/ISA_decode.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Mar 29 01:37:19 2021] Launched synth_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1/runme.log
+[Mon Mar 29 01:37:19 2021] Launched impl_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/ISA_decode.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Mar 29 01:42:54 2021] Launched synth_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1/runme.log
+[Mon Mar 29 01:42:54 2021] Launched impl_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Mar 29 01:43:49 2021] Launched synth_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1/runme.log
+[Mon Mar 29 01:43:49 2021] Launched impl_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/ISA_decode.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Mar 29 01:49:57 2021] Launched synth_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1/runme.log
+[Mon Mar 29 01:49:57 2021] Launched impl_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 2474.320 ; gain = 0.477
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/ISA_decode.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/ISA_decode.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Mar 29 01:54:36 2021] Launched synth_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1/runme.log
+[Mon Mar 29 01:54:36 2021] Launched impl_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 2475.691 ; gain = 0.277
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/ISA_decode.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Mar 29 01:58:25 2021] Launched synth_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1/runme.log
+[Mon Mar 29 01:58:25 2021] Launched impl_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:00 ; elapsed = 00:00:12 . Memory (MB): peak = 2475.785 ; gain = 0.094
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/ISA_decode.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Mar 29 02:03:06 2021] Launched synth_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1/runme.log
+[Mon Mar 29 02:03:06 2021] Launched impl_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:00 ; elapsed = 00:00:11 . Memory (MB): peak = 2477.883 ; gain = 0.000
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/ISA_decode.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Mar 29 02:09:43 2021] Launched synth_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1/runme.log
+[Mon Mar 29 02:09:43 2021] Launched impl_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/ISA_decode.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Mar 29 02:14:01 2021] Launched synth_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1/runme.log
+[Mon Mar 29 02:14:01 2021] Launched impl_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 2477.883 ; gain = 0.000
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/ISA_decode.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Mar 29 02:18:29 2021] Launched synth_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1/runme.log
+[Mon Mar 29 02:18:29 2021] Launched impl_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 2477.883 ; gain = 0.000
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1
+
+launch_runs synth_1 -jobs 4
+[Mon Mar 29 02:20:49 2021] Launched synth_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 2477.883 ; gain = 0.000
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. PID not specified
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Mar 29 02:20:53 2021] Launched synth_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1/runme.log
+[Mon Mar 29 02:20:53 2021] Launched impl_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/ISA_decode.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Mar 29 02:25:07 2021] Launched synth_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1/runme.log
+[Mon Mar 29 02:25:07 2021] Launched impl_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 2477.883 ; gain = 0.000
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. PID not specified
+2. Failed to delete one or more files in run directory C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1
+
+launch_runs impl_1 -jobs 4
+[Mon Mar 29 02:25:57 2021] Launched synth_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1/runme.log
+[Mon Mar 29 02:25:57 2021] Launched impl_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 2477.883 ; gain = 0.000
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. PID not specified
+
+launch_runs synth_1 -jobs 4
+[Mon Mar 29 02:26:02 2021] Launched synth_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Mar 29 02:26:06 2021] Launched synth_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1/runme.log
+[Mon Mar 29 02:26:06 2021] Launched impl_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/ISA_decode.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Mar 29 02:32:41 2021] Launched synth_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1/runme.log
+[Mon Mar 29 02:32:41 2021] Launched impl_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 2477.883 ; gain = 0.000
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/ISA_decode.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Mar 29 02:38:03 2021] Launched synth_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1/runme.log
+[Mon Mar 29 02:38:04 2021] Launched impl_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 2477.883 ; gain = 0.000
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/ISA_decode.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Mar 29 02:41:09 2021] Launched synth_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1/runme.log
+[Mon Mar 29 02:41:09 2021] Launched impl_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/ISA_decode.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Mar 29 02:44:42 2021] Launched synth_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1/runme.log
+[Mon Mar 29 02:44:42 2021] Launched impl_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 2477.883 ; gain = 0.000
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/ISA_decode.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Mar 29 02:48:45 2021] Launched synth_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1/runme.log
+[Mon Mar 29 02:48:45 2021] Launched impl_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 2477.883 ; gain = 0.000
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/ISA_decode.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Mar 29 02:52:56 2021] Launched synth_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1/runme.log
+[Mon Mar 29 02:52:56 2021] Launched impl_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 2477.883 ; gain = 0.000
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/ISA_decode.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Mar 29 02:58:16 2021] Launched synth_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1/runme.log
+[Mon Mar 29 02:58:16 2021] Launched impl_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:00 ; elapsed = 00:00:11 . Memory (MB): peak = 2478.305 ; gain = 0.168
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/ISA_decode.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Mar 29 03:02:27 2021] Launched synth_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1/runme.log
+[Mon Mar 29 03:02:27 2021] Launched impl_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/ISA_decode.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/ISA_decode.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Mar 29 03:07:41 2021] Launched synth_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1/runme.log
+[Mon Mar 29 03:07:41 2021] Launched impl_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 2478.332 ; gain = 0.000
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1
+
+launch_runs impl_1 -jobs 4
+[Mon Mar 29 03:09:24 2021] Launched synth_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1/runme.log
+[Mon Mar 29 03:09:24 2021] Launched impl_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Mar 29 03:09:34 2021] Launched synth_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1/runme.log
+[Mon Mar 29 03:09:34 2021] Launched impl_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/ISA_decode.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Mar 29 03:13:59 2021] Launched synth_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1/runme.log
+[Mon Mar 29 03:13:59 2021] Launched impl_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:00 ; elapsed = 00:00:12 . Memory (MB): peak = 2478.402 ; gain = 0.008
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/ISA_decode.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Mar 29 03:18:07 2021] Launched synth_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1/runme.log
+[Mon Mar 29 03:18:07 2021] Launched impl_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/ISA_decode.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Mar 29 03:21:55 2021] Launched synth_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1/runme.log
+[Mon Mar 29 03:21:55 2021] Launched impl_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 2478.734 ; gain = 0.000
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/ISA_decode.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Mar 29 03:25:29 2021] Launched synth_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1/runme.log
+[Mon Mar 29 03:25:29 2021] Launched impl_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 2478.777 ; gain = 0.043
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/ISA_decode.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Mar 29 03:29:31 2021] Launched synth_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1/runme.log
+[Mon Mar 29 03:29:31 2021] Launched impl_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 2478.777 ; gain = 0.000
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/ISA_decode.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Mar 29 03:40:25 2021] Launched synth_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1/runme.log
+[Mon Mar 29 03:40:25 2021] Launched impl_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Mar 29 03:46:26 2021] Launched synth_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1/runme.log
+[Mon Mar 29 03:46:26 2021] Launched impl_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/ISA_decode.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Mar 29 03:51:02 2021] Launched synth_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1/runme.log
+[Mon Mar 29 03:51:02 2021] Launched impl_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/ISA_decode.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Mar 29 03:55:59 2021] Launched synth_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1/runme.log
+[Mon Mar 29 03:55:59 2021] Launched impl_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/ISA_decode.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Mar 29 04:26:41 2021] Launched synth_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/synth_1/runme.log
+[Mon Mar 29 04:26:41 2021] Launched impl_1...
+Run output will be captured here: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.runs/impl_1/runme.log
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open {C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/sim_1/new/tb_ISA_decode.v} w ]
+add_files -fileset sim_1 {{C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/sim_1/new/tb_ISA_decode.v}}
+update_compile_order -fileset sim_1
+launch_simulation
+Command: launch_simulation 
+boost::filesystem::remove: The process cannot access the file because it is being used by another process: "C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.sim/sim_1/behav/xsim/simulate.log"
+update_compile_order -fileset sim_1
+launch_simulation
+Command: launch_simulation 
+boost::filesystem::remove: The process cannot access the file because it is being used by another process: "C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.sim/sim_1/behav/xsim/simulate.log"
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210292A6E47CA
+launch_simulation
+Command: launch_simulation 
+boost::filesystem::remove: The process cannot access the file because it is being used by another process: "C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.sim/sim_1/behav/xsim/simulate.log"
+launch_simulation -mode post-synthesis -type functional
+Command: launch_simulation -mode post-synthesis -type functional
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching post-synthesis functional simulation in 'C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.sim/sim_1/synth/func/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a100tcsg324-1
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/sources_1/bd/ALU/ip/ALU_and16_0_0/ALU_and16_0_0.dcp' for cell 'registerfile/mux/alu/and16_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/sources_1/bd/ALU/ip/ALU_c_addsub_0_0/ALU_c_addsub_0_0.dcp' for cell 'registerfile/mux/alu/c_addsub_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/sources_1/bd/ALU/ip/ALU_c_addsub_1_0/ALU_c_addsub_1_0.dcp' for cell 'registerfile/mux/alu/c_addsub_1'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/sources_1/bd/ALU/ip/ALU_div_gen_0_2/ALU_div_gen_0_2.dcp' for cell 'registerfile/mux/alu/div_gen_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/sources_1/bd/ALU/ip/ALU_mod16_0_0/ALU_mod16_0_0.dcp' for cell 'registerfile/mux/alu/mod16_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/sources_1/bd/ALU/ip/ALU_mult_gen_0_0/ALU_mult_gen_0_0.dcp' for cell 'registerfile/mux/alu/mult_gen_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/sources_1/bd/ALU/ip/ALU_or16_0_0/ALU_or16_0_0.dcp' for cell 'registerfile/mux/alu/or16_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/sources_1/bd/ALU/ip/ALU_xor16_0_0/ALU_xor16_0_0.dcp' for cell 'registerfile/mux/alu/xor16_0'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.060 . Memory (MB): peak = 2834.145 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 438 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/constrs_1/imports/Downloads/timing.xdc]
+WARNING: [Vivado 12-584] No ports matched 'LED[0]'. [C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/constrs_1/imports/Downloads/timing.xdc:33]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/constrs_1/imports/Downloads/timing.xdc:33]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[1]'. [C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/constrs_1/imports/Downloads/timing.xdc:34]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/constrs_1/imports/Downloads/timing.xdc:34]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[2]'. [C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/constrs_1/imports/Downloads/timing.xdc:35]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/constrs_1/imports/Downloads/timing.xdc:35]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[3]'. [C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/constrs_1/imports/Downloads/timing.xdc:36]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/constrs_1/imports/Downloads/timing.xdc:36]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[4]'. [C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/constrs_1/imports/Downloads/timing.xdc:37]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/constrs_1/imports/Downloads/timing.xdc:37]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[5]'. [C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/constrs_1/imports/Downloads/timing.xdc:38]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/constrs_1/imports/Downloads/timing.xdc:38]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[6]'. [C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/constrs_1/imports/Downloads/timing.xdc:39]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/constrs_1/imports/Downloads/timing.xdc:39]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[7]'. [C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/constrs_1/imports/Downloads/timing.xdc:40]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/constrs_1/imports/Downloads/timing.xdc:40]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[8]'. [C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/constrs_1/imports/Downloads/timing.xdc:41]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/constrs_1/imports/Downloads/timing.xdc:41]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[9]'. [C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/constrs_1/imports/Downloads/timing.xdc:42]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/constrs_1/imports/Downloads/timing.xdc:42]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[10]'. [C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/constrs_1/imports/Downloads/timing.xdc:43]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/constrs_1/imports/Downloads/timing.xdc:43]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[11]'. [C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/constrs_1/imports/Downloads/timing.xdc:44]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/constrs_1/imports/Downloads/timing.xdc:44]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[12]'. [C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/constrs_1/imports/Downloads/timing.xdc:45]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/constrs_1/imports/Downloads/timing.xdc:45]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[13]'. [C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/constrs_1/imports/Downloads/timing.xdc:46]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/constrs_1/imports/Downloads/timing.xdc:46]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[14]'. [C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/constrs_1/imports/Downloads/timing.xdc:47]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/constrs_1/imports/Downloads/timing.xdc:47]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[15]'. [C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/constrs_1/imports/Downloads/timing.xdc:48]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/constrs_1/imports/Downloads/timing.xdc:48]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/constrs_1/imports/Downloads/timing.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2940.695 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:18 ; elapsed = 00:00:16 . Memory (MB): peak = 3094.477 ; gain = 560.828
+INFO: [SIM-utils-24] Writing simulation netlist file for design 'synth_1'...
+INFO: [SIM-utils-25] write_verilog -mode funcsim -nolib -force -file "C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.sim/sim_1/synth/func/xsim/tb_ISA_decode_func_synth.v"
+INFO: [SIM-utils-36] Netlist generated:C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.sim/sim_1/synth/func/xsim/tb_ISA_decode_func_synth.v
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.sim/sim_1/synth/func/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_ISA_decode' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.sim/sim_1/synth/func/xsim/text_data.mem'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.sim/sim_1/synth/func/xsim'
+"xvlog --incr --relax -prj tb_ISA_decode_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.sim/sim_1/synth/func/xsim/tb_ISA_decode_func_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-311] analyzing module ALU_and16_0_0
+INFO: [VRFC 10-311] analyzing module ALU_and16_0_0_and16
+INFO: [VRFC 10-311] analyzing module ALU_c_addsub_0_0
+INFO: [VRFC 10-311] analyzing module ALU_c_addsub_1_0
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2
+INFO: [VRFC 10-311] analyzing module ALU_mod16_0_0
+INFO: [VRFC 10-311] analyzing module ALU_mod16_0_0_mod16
+INFO: [VRFC 10-311] analyzing module ALU_mult_gen_0_0
+INFO: [VRFC 10-311] analyzing module ALU_or16_0_0
+INFO: [VRFC 10-311] analyzing module ALU_or16_0_0_or16
+INFO: [VRFC 10-311] analyzing module ALU_xor16_0_0
+INFO: [VRFC 10-311] analyzing module ALU_xor16_0_0_xor16
+INFO: [VRFC 10-311] analyzing module Debounce_cb
+INFO: [VRFC 10-311] analyzing module Filter
+INFO: [VRFC 10-311] analyzing module ISA_decode
+INFO: [VRFC 10-311] analyzing module MUX
+INFO: [VRFC 10-311] analyzing module SSD
+INFO: [VRFC 10-311] analyzing module clk_divider
+INFO: [VRFC 10-311] analyzing module refresh_clk
+INFO: [VRFC 10-311] analyzing module register_file
+INFO: [VRFC 10-311] analyzing module ALU_c_addsub_0_0_c_addsub_v12_0_14
+INFO: [VRFC 10-311] analyzing module ALU_c_addsub_1_0_c_addsub_v12_0_14
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_div_gen_v5_1_16
+INFO: [VRFC 10-311] analyzing module ALU_mult_gen_0_0_mult_gen_v12_0_16
+INFO: [VRFC 10-311] analyzing module ALU_c_addsub_0_0_c_addsub_v12_0_14_fabric_legacy
+INFO: [VRFC 10-311] analyzing module ALU_c_addsub_0_0_c_addsub_v12_0_14_legacy
+INFO: [VRFC 10-311] analyzing module ALU_c_addsub_0_0_c_addsub_v12_0_14_lut6_legacy
+INFO: [VRFC 10-311] analyzing module ALU_c_addsub_0_0_c_addsub_v12_0_14_viv
+INFO: [VRFC 10-311] analyzing module ALU_c_addsub_0_0_c_reg_fd_v12_0_6_viv
+INFO: [VRFC 10-311] analyzing module ALU_c_addsub_1_0_c_addsub_v12_0_14_fabric_legacy
+INFO: [VRFC 10-311] analyzing module ALU_c_addsub_1_0_c_addsub_v12_0_14_legacy
+INFO: [VRFC 10-311] analyzing module ALU_c_addsub_1_0_c_addsub_v12_0_14_lut6_legacy
+INFO: [VRFC 10-311] analyzing module ALU_c_addsub_1_0_c_addsub_v12_0_14_viv
+INFO: [VRFC 10-311] analyzing module ALU_c_addsub_1_0_c_reg_fd_v12_0_6_viv
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_addsubreg_v
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_addsubreg_v_10
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_addsubreg_v_12
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_addsubreg_v_15
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_addsubreg_v_17
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_addsubreg_v_19
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_addsubreg_v_2
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_addsubreg_v_21
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_addsubreg_v_23
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_addsubreg_v_25
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_addsubreg_v_27
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_addsubreg_v_29
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_addsubreg_v_31
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_addsubreg_v_4
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_addsubreg_v_6
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_addsubreg_v_8
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_addsubreg_v__parameterized0
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_bip_sdivider_synth
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_addsub_lut6
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_addsub_lut6_100
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_addsub_lut6_105
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_addsub_lut6_110
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_addsub_lut6_40
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_addsub_lut6_45
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_addsub_lut6_50
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_addsub_lut6_55
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_addsub_lut6_60
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_addsub_lut6_65
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_addsub_lut6_70
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_addsub_lut6_75
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_addsub_lut6_80
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_addsub_lut6_85
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_addsub_lut6_90
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_addsub_lut6_95
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_addsub_lut6__parameterized1
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_addsub_viv
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_addsub_viv_104
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_addsub_viv_109
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_addsub_viv_39
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_addsub_viv_44
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_addsub_viv_49
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_addsub_viv_54
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_addsub_viv_59
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_addsub_viv_64
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_addsub_viv_69
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_addsub_viv_74
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_addsub_viv_79
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_addsub_viv_84
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_addsub_viv_89
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_addsub_viv_94
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_addsub_viv_99
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_addsub_viv__parameterized0
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_twos_comp_viv
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_twos_comp_viv__parameterized0
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_twos_comp_viv__parameterized1
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_twos_comp_viv__parameterized1_1
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_cmp2s_v
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_cmp2s_v__parameterized0
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_cmp2s_v__parameterized1
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_cmp2s_v__parameterized1_0
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_div_gen_synth
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_div_gen_v5_1_16_viv
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_dividervdc_v
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized1
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized11
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized13
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized15
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized17
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized19
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized21
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized23
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized25
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized27
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized29
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized3
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized31
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized33
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized35
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized37
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized39
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized3_34
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized41
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized43
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized45
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized47
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized49
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized5
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized51
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized53
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized55
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized57
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized59
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized5_11
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized5_13
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized5_16
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized5_18
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized5_20
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized5_22
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized5_24
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized5_26
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized5_28
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized5_3
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized5_30
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized5_32
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized5_33
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized5_5
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized5_7
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized5_9
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized61
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized63
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized65
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized68
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized7
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized70
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized7_101
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized7_103
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized7_106
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized7_108
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized7_111
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized7_113
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized7_14
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized7_35
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized7_36
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized7_37
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized7_38
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized7_41
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized7_43
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized7_46
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized7_48
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized7_51
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized7_53
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized7_56
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized7_58
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized7_61
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized7_63
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized7_66
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized7_68
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized7_71
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized7_73
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized7_76
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized7_78
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized7_81
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized7_83
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized7_86
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized7_88
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized7_91
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized7_93
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized7_96
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized7_98
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized9
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized9_102
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized9_107
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized9_112
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized9_42
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized9_47
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized9_52
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized9_57
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized9_62
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized9_67
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized9_72
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized9_77
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized9_82
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized9_87
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized9_92
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized9_97
+INFO: [VRFC 10-311] analyzing module ALU_mult_gen_0_0_luts
+INFO: [VRFC 10-311] analyzing module ALU_mult_gen_0_0_mult_gen_v12_0_16_viv
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/sim_1/new/tb_ISA_decode.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_ISA_decode
+run_program: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 3479.211 ; gain = 374.883
+INFO: [USF-XSim-69] 'compile' step finished in '7' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.sim/sim_1/synth/func/xsim'
+"xelab -wto 262eeb1de83c49b4b8cdba8c58c72745 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L secureip --snapshot tb_ISA_decode_func_synth xil_defaultlib.tb_ISA_decode xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 262eeb1de83c49b4b8cdba8c58c72745 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L secureip --snapshot tb_ISA_decode_func_synth xil_defaultlib.tb_ISA_decode xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-2538] module instantiation should have an instance name [C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/sim_1/new/tb_ISA_decode.v:31]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.sim/sim_1/synth/func/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.sim/sim_1/synth/func/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:32 ; elapsed = 00:00:28 . Memory (MB): peak = 3479.211 ; gain = 945.562
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation -mode post-implementation -type timing
+Command: launch_simulation -mode post-implementation -type timing
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching post-implementation timing simulation in 'C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.sim/sim_1/impl/timing/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.055 . Memory (MB): peak = 3490.000 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 396 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.246 . Memory (MB): peak = 3702.805 ; gain = 0.000
+Restored from archive | CPU: 1.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.246 . Memory (MB): peak = 3702.805 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 3702.805 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [SIM-utils-31] Writing simulation netlist file for design 'impl_1'...
+INFO: [SIM-utils-32] write_verilog -mode timesim -nolib -sdf_anno true -force -file "C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.sim/sim_1/impl/timing/xsim/tb_ISA_decode_time_impl.v"
+INFO: [SIM-utils-34] Writing SDF file...
+INFO: [SIM-utils-35] write_sdf -mode timesim -process_corner slow -force -file "C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.sim/sim_1/impl/timing/xsim/tb_ISA_decode_time_impl.sdf"
+INFO: [SIM-utils-36] Netlist generated:C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.sim/sim_1/impl/timing/xsim/tb_ISA_decode_time_impl.v
+INFO: [SIM-utils-37] SDF generated:C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.sim/sim_1/impl/timing/xsim/tb_ISA_decode_time_impl.sdf
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.sim/sim_1/impl/timing/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_ISA_decode' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.sim/sim_1/impl/timing/xsim/text_data.mem'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.sim/sim_1/impl/timing/xsim'
+"xvlog --incr --relax -prj tb_ISA_decode_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.sim/sim_1/impl/timing/xsim/tb_ISA_decode_time_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-311] analyzing module ALU_and16_0_0
+INFO: [VRFC 10-311] analyzing module ALU_and16_0_0_and16
+INFO: [VRFC 10-311] analyzing module ALU_c_addsub_0_0
+INFO: [VRFC 10-311] analyzing module ALU_c_addsub_1_0
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2
+INFO: [VRFC 10-311] analyzing module ALU_mod16_0_0
+INFO: [VRFC 10-311] analyzing module ALU_mod16_0_0_mod16
+INFO: [VRFC 10-311] analyzing module ALU_mult_gen_0_0
+INFO: [VRFC 10-311] analyzing module ALU_or16_0_0
+INFO: [VRFC 10-311] analyzing module ALU_or16_0_0_or16
+INFO: [VRFC 10-311] analyzing module ALU_xor16_0_0
+INFO: [VRFC 10-311] analyzing module ALU_xor16_0_0_xor16
+INFO: [VRFC 10-311] analyzing module Debounce_cb
+INFO: [VRFC 10-311] analyzing module Filter
+INFO: [VRFC 10-311] analyzing module ISA_decode
+INFO: [VRFC 10-311] analyzing module MUX
+INFO: [VRFC 10-311] analyzing module SSD
+INFO: [VRFC 10-311] analyzing module clk_divider
+INFO: [VRFC 10-311] analyzing module refresh_clk
+INFO: [VRFC 10-311] analyzing module register_file
+INFO: [VRFC 10-311] analyzing module ALU_c_addsub_0_0_c_addsub_v12_0_14
+INFO: [VRFC 10-311] analyzing module ALU_c_addsub_1_0_c_addsub_v12_0_14
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_div_gen_v5_1_16
+INFO: [VRFC 10-311] analyzing module ALU_mult_gen_0_0_mult_gen_v12_0_16
+INFO: [VRFC 10-311] analyzing module ALU_c_addsub_0_0_c_addsub_v12_0_14_fabric_legacy
+INFO: [VRFC 10-311] analyzing module ALU_c_addsub_0_0_c_addsub_v12_0_14_legacy
+INFO: [VRFC 10-311] analyzing module ALU_c_addsub_0_0_c_addsub_v12_0_14_lut6_legacy
+INFO: [VRFC 10-311] analyzing module ALU_c_addsub_0_0_c_addsub_v12_0_14_viv
+INFO: [VRFC 10-311] analyzing module ALU_c_addsub_0_0_c_reg_fd_v12_0_6_viv
+INFO: [VRFC 10-311] analyzing module ALU_c_addsub_1_0_c_addsub_v12_0_14_fabric_legacy
+INFO: [VRFC 10-311] analyzing module ALU_c_addsub_1_0_c_addsub_v12_0_14_legacy
+INFO: [VRFC 10-311] analyzing module ALU_c_addsub_1_0_c_addsub_v12_0_14_lut6_legacy
+INFO: [VRFC 10-311] analyzing module ALU_c_addsub_1_0_c_addsub_v12_0_14_viv
+INFO: [VRFC 10-311] analyzing module ALU_c_addsub_1_0_c_reg_fd_v12_0_6_viv
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_addsubreg_v
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_addsubreg_v_10
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_addsubreg_v_12
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_addsubreg_v_15
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_addsubreg_v_17
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_addsubreg_v_19
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_addsubreg_v_2
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_addsubreg_v_21
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_addsubreg_v_23
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_addsubreg_v_25
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_addsubreg_v_27
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_addsubreg_v_29
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_addsubreg_v_31
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_addsubreg_v_4
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_addsubreg_v_6
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_addsubreg_v_8
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_addsubreg_v__parameterized0
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_bip_sdivider_synth
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_addsub_lut6
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_addsub_lut6_100
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_addsub_lut6_105
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_addsub_lut6_110
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_addsub_lut6_40
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_addsub_lut6_45
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_addsub_lut6_50
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_addsub_lut6_55
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_addsub_lut6_60
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_addsub_lut6_65
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_addsub_lut6_70
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_addsub_lut6_75
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_addsub_lut6_80
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_addsub_lut6_85
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_addsub_lut6_90
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_addsub_lut6_95
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_addsub_lut6__parameterized1
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_addsub_viv
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_addsub_viv_104
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_addsub_viv_109
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_addsub_viv_39
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_addsub_viv_44
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_addsub_viv_49
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_addsub_viv_54
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_addsub_viv_59
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_addsub_viv_64
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_addsub_viv_69
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_addsub_viv_74
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_addsub_viv_79
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_addsub_viv_84
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_addsub_viv_89
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_addsub_viv_94
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_addsub_viv_99
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_addsub_viv__parameterized0
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_twos_comp_viv
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_twos_comp_viv__parameterized0
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_c_twos_comp_viv__parameterized1
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_cmp2s_v
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_cmp2s_v__parameterized0
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_cmp2s_v__parameterized1_0
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_div_gen_synth
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_div_gen_v5_1_16_viv
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_dividervdc_v
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized1
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized11
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized15
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized19
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized23
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized27
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized3
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized31
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized35
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized39
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized43
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized47
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized5
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized51
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized55
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized59
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized5_11
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized5_13
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized5_16
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized5_18
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized5_20
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized5_22
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized5_24
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized5_26
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized5_28
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized5_3
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized5_30
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized5_32
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized5_33
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized5_5
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized5_7
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized5_9
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized63
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized70
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized7_14
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized9
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized9_102
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized9_107
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized9_112
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized9_42
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized9_47
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized9_52
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized9_57
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized9_62
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized9_67
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized9_72
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized9_77
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized9_82
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized9_87
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized9_92
+INFO: [VRFC 10-311] analyzing module ALU_div_gen_0_2_xbip_pipe_v3_0_6_viv__parameterized9_97
+INFO: [VRFC 10-311] analyzing module ALU_mult_gen_0_0_luts
+INFO: [VRFC 10-311] analyzing module ALU_mult_gen_0_0_mult_gen_v12_0_16_viv
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/sim_1/new/tb_ISA_decode.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_ISA_decode
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 3819.535 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '6' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.sim/sim_1/impl/timing/xsim'
+"xelab -wto 262eeb1de83c49b4b8cdba8c58c72745 --incr --debug typical --relax --mt 2 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot tb_ISA_decode_time_impl -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.tb_ISA_decode xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 262eeb1de83c49b4b8cdba8c58c72745 --incr --debug typical --relax --mt 2 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot tb_ISA_decode_time_impl -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.tb_ISA_decode xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-2538] module instantiation should have an instance name [C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.srcs/sim_1/new/tb_ISA_decode.v:31]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.sim/sim_1/impl/timing/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.sim/sim_1/impl/timing/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 3819.535 ; gain = 340.324
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+boost::filesystem::remove: The process cannot access the file because it is being used by another process: "C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.sim/sim_1/behav/xsim/simulate.log"
+launch_simulation
+Command: launch_simulation 
+boost::filesystem::remove: The process cannot access the file because it is being used by another process: "C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4Phase1 - 1/HW4Phase1/HW4/HW4.sim/sim_1/behav/xsim/simulate.log"
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Mar 29 04:37:30 2021...

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1617313921">
+  <File Type="PA-TCL" Name="ISA.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="ISA_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="ISA_reports.tcl"/>
+  <File Type="RDS-RDS" Name="ISA.vds"/>
+  <File Type="RDS-UTIL" Name="ISA_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="ISA_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="ISA.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="ISA_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="ISA_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/and16.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/or16.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/xor16.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/mod16.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/ALU/ALU.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/Debounce_cb.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/MUX.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../415 Hws and Projects/HW4/HW4_Blake_Wishard/HW4_Blake_Wishard.srcs/sources_1/new/MUX.v"/>
+        <Attr Name="ImportTime" Val="1617311568"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/Register_File.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../415 Hws and Projects/HW4/HW4_Blake_Wishard/HW4_Blake_Wishard.srcs/sources_1/new/Register_File.v"/>
+        <Attr Name="ImportTime" Val="1617311648"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/SSD.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../415 Hws and Projects/HW4/HW4_Blake_Wishard/HW4_Blake_Wishard.srcs/sources_1/new/SSD.v"/>
+        <Attr Name="ImportTime" Val="1617311523"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/ISA.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../415 Hws and Projects/HW4/HW4_Blake_Wishard/HW4_Blake_Wishard.srcs/sources_1/new/ISA.v"/>
+        <Attr Name="ImportTime" Val="1617311956"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/single_port_mem.v">
+      <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/text_data.mem">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="ISA"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/Downloads/timing.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../415 Hws and Projects/HW1/HW1.srcs/constrs_1/imports/Downloads/timing.xdc"/>
+        <Attr Name="ImportTime" Val="1612658807"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="ALU_or16_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="ALU_xor16_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="ALU_mult_gen_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="ALU_div_gen_0_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="ALU_and16_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="ALU_c_addsub_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="ALU_c_addsub_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="ALU_mod16_0_0"/>
+</GenRun>

@@ -1,0 +1,34 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Sat Mar 20 19:43:04 2021
+# Process ID: 17680
+# Current directory: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW3/HW3
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2956 C:\Users\nehmy\OneDrive\Desktop\415 Hws and Projects\HW3\HW3\HW3.xpr
+# Log file: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW3/HW3/vivado.log
+# Journal file: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW3/HW3\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW3/HW3/HW3.xpr}
+INFO: [Project 1-313] Project file moved from 'C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW3' since last save.
+WARNING: [Project 1-312] File not found as 'C:/Users/nehmy/OneDrive/Downloads/16bit files/Button_Debounce.v'; using path 'C:/Users/nehmy/Downloads/16bit files/Button_Debounce.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/nehmy/OneDrive/Downloads/16bit files/pulser.v'; using path 'C:/Users/nehmy/Downloads/16bit files/pulser.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/nehmy/OneDrive/Downloads/16bit files/random2.v'; using path 'C:/Users/nehmy/Downloads/16bit files/random2.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/nehmy/OneDrive/Downloads/16bit files/pow.xdc'; using path 'C:/Users/nehmy/Downloads/16bit files/pow.xdc' instead.
+Scanning sources...
+Finished scanning sources
+WARNING: [Project 1-312] File not found as 'C:/Users/nehmy/OneDrive/Downloads/16bit files/Button_Debounce.v'; using path 'C:/Users/nehmy/Downloads/16bit files/Button_Debounce.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/nehmy/OneDrive/Downloads/16bit files/pulser.v'; using path 'C:/Users/nehmy/Downloads/16bit files/pulser.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/nehmy/OneDrive/Downloads/16bit files/random2.v'; using path 'C:/Users/nehmy/Downloads/16bit files/random2.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/nehmy/OneDrive/Downloads/16bit files/pow.xdc'; using path 'C:/Users/nehmy/Downloads/16bit files/pow.xdc' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/nehmy/OneDrive/Downloads/16bit files/Button_Debounce.v'; using path 'C:/Users/nehmy/Downloads/16bit files/Button_Debounce.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/nehmy/OneDrive/Downloads/16bit files/pulser.v'; using path 'C:/Users/nehmy/Downloads/16bit files/pulser.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/nehmy/OneDrive/Downloads/16bit files/random2.v'; using path 'C:/Users/nehmy/Downloads/16bit files/random2.v' instead.
+WARNING: [Project 1-312] File not found as 'C:/Users/nehmy/OneDrive/Downloads/16bit files/pow.xdc'; using path 'C:/Users/nehmy/Downloads/16bit files/pow.xdc' instead.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'.
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat Mar 20 22:07:24 2021...

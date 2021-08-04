@@ -1,0 +1,16 @@
+0.6
+2019.2
+Nov  6 2019
+21:57:16
+C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4/HW4/HW4.ip_user_files/bd/ALU/ip/ALU_and16_0_0/sim/ALU_and16_0_0.v,1615663676,verilog,,C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4/HW4/HW4.ip_user_files/bd/ALU/ip/ALU_or16_0_0/sim/ALU_or16_0_0.v,,ALU_and16_0_0,,,,,,,,
+C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4/HW4/HW4.ip_user_files/bd/ALU/ip/ALU_c_addsub_0_0/sim/ALU_c_addsub_0_0.vhd,1615663676,vhdl,,,,alu_c_addsub_0_0,,,,,,,,
+C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4/HW4/HW4.ip_user_files/bd/ALU/ip/ALU_c_addsub_1_0/sim/ALU_c_addsub_1_0.vhd,1615663676,vhdl,,,,alu_c_addsub_1_0,,,,,,,,
+C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4/HW4/HW4.ip_user_files/bd/ALU/ip/ALU_mult_gen_0_0/sim/ALU_mult_gen_0_0.vhd,1615663676,vhdl,,,,alu_mult_gen_0_0,,,,,,,,
+C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4/HW4/HW4.ip_user_files/bd/ALU/ip/ALU_or16_0_0/sim/ALU_or16_0_0.v,1615663676,verilog,,C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4/HW4/HW4.ip_user_files/bd/ALU/ip/ALU_xor16_0_0/sim/ALU_xor16_0_0.v,,ALU_or16_0_0,,,,,,,,
+C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4/HW4/HW4.ip_user_files/bd/ALU/ip/ALU_xor16_0_0/sim/ALU_xor16_0_0.v,1615663676,verilog,,C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4/HW4/HW4.ip_user_files/bd/ALU/sim/ALU.v,,ALU_xor16_0_0,,,,,,,,
+C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4/HW4/HW4.ip_user_files/bd/ALU/sim/ALU.v,1615663675,verilog,,C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4/HW4/HW4.srcs/sim_1/new/ALU_tb.v,,ALU,,,,,,,,
+C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4/HW4/HW4.sim/sim_1/behav/xsim/glbl.v,1573089660,verilog,,,,glbl,,,,,,,,
+C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4/HW4/HW4.srcs/sim_1/new/ALU_tb.v,1615746274,verilog,,,,ALU_tb,,,,,,,,
+C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4/HW4/HW4.srcs/sources_1/new/and16.v,1615661184,verilog,,C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4/HW4/HW4.srcs/sources_1/new/or16.v,,and16,,,,,,,,
+C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4/HW4/HW4.srcs/sources_1/new/or16.v,1615661223,verilog,,C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4/HW4/HW4.srcs/sources_1/new/xor16.v,,or16,,,,,,,,
+C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4/HW4/HW4.srcs/sources_1/new/xor16.v,1615661208,verilog,,C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4/HW4/HW4.ip_user_files/bd/ALU/ip/ALU_and16_0_0/sim/ALU_and16_0_0.v,,xor16,,,,,,,,

@@ -1,0 +1,8 @@
+ALU_c_addsub_0_0.vhd,vhdl,xil_defaultlib,../../../bd/ALU/ip/ALU_c_addsub_0_0/sim/ALU_c_addsub_0_0.vhd,
+ALU_c_addsub_1_0.vhd,vhdl,xil_defaultlib,../../../bd/ALU/ip/ALU_c_addsub_1_0/sim/ALU_c_addsub_1_0.vhd,
+ALU_mult_gen_0_0.vhd,vhdl,xil_defaultlib,../../../bd/ALU/ip/ALU_mult_gen_0_0/sim/ALU_mult_gen_0_0.vhd,
+ALU_and16_0_0.v,verilog,xil_defaultlib,../../../bd/ALU/ip/ALU_and16_0_0/sim/ALU_and16_0_0.v,
+ALU_or16_0_0.v,verilog,xil_defaultlib,../../../bd/ALU/ip/ALU_or16_0_0/sim/ALU_or16_0_0.v,
+ALU_xor16_0_0.v,verilog,xil_defaultlib,../../../bd/ALU/ip/ALU_xor16_0_0/sim/ALU_xor16_0_0.v,
+ALU.v,verilog,xil_defaultlib,../../../bd/ALU/sim/ALU.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

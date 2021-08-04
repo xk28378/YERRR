@@ -1,0 +1,10 @@
+verilog xil_defaultlib  \
+"../../../bd/ALU/ip/ALU_and16_0_0/sim/ALU_and16_0_0.v" \
+"../../../bd/ALU/ip/ALU_or16_0_0/sim/ALU_or16_0_0.v" \
+"../../../bd/ALU/ip/ALU_xor16_0_0/sim/ALU_xor16_0_0.v" \
+"../../../bd/ALU/sim/ALU.v" \
+"../../../bd/ALU/ip/ALU_mod16_0_0/sim/ALU_mod16_0_0.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

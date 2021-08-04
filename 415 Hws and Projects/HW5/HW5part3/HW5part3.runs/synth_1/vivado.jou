@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Sun Apr 18 16:36:27 2021
+# Process ID: 10700
+# Current directory: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW5/HW5part3/HW5part3.runs/synth_1
+# Command line: vivado.exe -log part3.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source part3.tcl
+# Log file: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW5/HW5part3/HW5part3.runs/synth_1/part3.vds
+# Journal file: C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW5/HW5part3/HW5part3.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source part3.tcl -notrace

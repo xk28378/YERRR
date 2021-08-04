@@ -1,0 +1,18 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../HW4.srcs/sources_1/new/and16.v" \
+"../../../../HW4.srcs/sources_1/new/or16.v" \
+"../../../../HW4.srcs/sources_1/new/xor16.v" \
+"../../../../HW4.srcs/sources_1/new/mod16.v" \
+"../../../../HW4.ip_user_files/bd/ALU/ip/ALU_and16_0_0/sim/ALU_and16_0_0.v" \
+"../../../../HW4.ip_user_files/bd/ALU/ip/ALU_or16_0_0/sim/ALU_or16_0_0.v" \
+"../../../../HW4.ip_user_files/bd/ALU/ip/ALU_xor16_0_0/sim/ALU_xor16_0_0.v" \
+"../../../../HW4.ip_user_files/bd/ALU/sim/ALU.v" \
+"../../../../HW4.ip_user_files/bd/ALU/ip/ALU_mod16_0_0/sim/ALU_mod16_0_0.v" \
+"../../../../HW4.srcs/sim_1/new/ALU_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

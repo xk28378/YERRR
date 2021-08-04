@@ -1,0 +1,6 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4/HW4/HW4.ip_user_files/bd/ALU/ip/ALU_c_addsub_0_0/sim/ALU_c_addsub_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ALU_c_addsub_0_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4/HW4/HW4.ip_user_files/bd/ALU/ip/ALU_c_addsub_1_0/sim/ALU_c_addsub_1_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ALU_c_addsub_1_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/nehmy/OneDrive/Desktop/415 Hws and Projects/HW4/HW4/HW4.ip_user_files/bd/ALU/ip/ALU_mult_gen_0_0/sim/ALU_mult_gen_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ALU_mult_gen_0_0'
