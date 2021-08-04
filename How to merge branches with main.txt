@@ -1,0 +1,28 @@
+0. (in current topic branch) git add, git commit, git push 
+
+1. git checkout main
+
+2. git pull --rebase origin main
+
+3. checkout topic
+	git chekcout topic/orb-ingest
+
+4. git rebase  main  
+	
+5. handle merge conflicts
+	which change to I want to keep
+	Accpeting -> go slow, see all choices
+	get rid of all >>>> <<<<<<<<<<<
+	
+5b. git add.
+5c. git rebase --continue
+	
+6. checkout main again
+
+7. git merge --ff-only --sqaush topic/
+
+8. git commit -> insert nice log message
+
+9. reapeat for every branch to merge into main 
+
+10. once you feel your done, git add . then ensure you give a good commit message! before final push to main
