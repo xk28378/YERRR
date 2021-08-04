@@ -1,0 +1,4 @@
+James Krugger	14	ComputerScience	80	50	80	
+Monica G	24	Datascience	90	95	90	
+Robin K	25	InformationSystems	90	95	80	
+James Brown	26	ComputerScience	80	80	80	

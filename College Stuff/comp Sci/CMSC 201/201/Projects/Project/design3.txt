@@ -1,0 +1,113 @@
+# File: design3.txt
+# Author: Nem Negash
+# Date: 12/10/18
+# Section: Section 12
+# E-mail: xk28378@umbc.edu
+# Description: project design for project 3
+#constants
+#N = 9
+#def readFile(filename):
+	#takes in the file
+	#reads it and stores it in a list 
+	#returns list
+#INPUT: file
+#OUTPUT: the board list
+
+#def Solve(board):
+	#takes in the board 
+	#solves the puzzle
+	#returns solved puzzle
+#INPUT: game baord
+#OUTPUT: solves game board
+
+#def play(board, row, col, num):
+	#takes in the board
+	#appends num into the specified spot
+	#returns board
+#INPUT:board, row, col, num
+#OUTPUT: newboard
+
+#def undo(undoList, board):
+	#all the values in the undo list are row and col values
+	#takes the last list in the undolist
+	#makes the value at cell = '_'
+	#return board
+#INPUT: undolist, board
+#OUTPUT: new board
+
+#def correctness(board, solved board, row, col):
+	#checks if the value at that cell in the board
+	#if the same as the one in the solved board
+	#returns boolean flag
+#INPUT:board, solved board, row, col
+#OUTPUT: true or false
+
+#def Win(board, solvepuzzle):
+	#check if board == solves puzzle
+	#if true win = true
+	#else win == false
+	#return win
+#INPUT: board and solved puzzle
+#OUTPUT: win
+
+# def prettyPrint(board) 
+#		prints the board with row and column labels,
+#               and spaces the board out so that it looks nice
+# Input:        board;   the square 2d game board (of integers) to print
+# Output:       None;    prints the board in a pretty way
+
+# savePuzzle(board, filename) 
+#		writes the contents a sudoku puzzle out
+#               to a file in comma separated format
+# Input:        board;the square 2d puzzle (of integers) to write to a file
+#              fileName; the name of the file to use for writing to
+
+#def main():
+#	win = false
+#	filename = user inputs file name
+#	fileinput = opens the file
+#	board = brings in the board from the file
+#	solvepuzzle = deepcopy of board
+#	solvepuzzle = Solve(solvepuzzle)
+#	undolist = []
+#	prettyPrint(board)
+	#ask user if they want to play or solve
+	#ask user if they want correctness if they choose to play
+#	while(win = false):
+		#print board
+		#ask user if they want to play, solve or quitor undo
+		#if they choose to play:
+			#ask for row, column, and num to put in cell
+			#append row and col to undo list
+			#print board
+			#win = Win(board, solvepuzzle)
+#			if(win = true):
+				#print"you win!"
+		#if they choose to solve:
+			#print solvepuzzle
+			#win = true
+		#if they choose to quit:
+			#print'goodbye here is the final board
+			#print the current board
+			#win = true
+		#if they choose to undo:
+#			board = undo(undolist, board)
+
+
+#main()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

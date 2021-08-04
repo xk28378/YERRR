@@ -1,0 +1,105 @@
+# File:    design1.txt
+# Author:  Nem Negash
+# Date:    10/18/2018
+# Section: Section 12
+# E-mail:  xk28378@umbc.edu
+# Description: This is the design for the text base game project.
+#constants for health of player and monster
+MAX_HEALTH = 100
+MIN_HEALTH = 0
+DEM_MAX_HEALTH = 300
+
+#constant for survival 
+SURVIVE_DAYS = 7
+SURVIVE_DISTANCE = 150
+
+#constant lost for food and items
+ITEMS = ["Sword", "Bicycle", "Hi-C", "Heelys","Walkman", "Laser Cannon","Rubber Band"]
+FOODS = ["Reese's Pieces", "Pop Rocks", "Ovaltine", "Wonder Bread", "Twinkies"]
+LEAVE_OR_STAY = ['pack up and go", "stay at camp"]
+FIGHT = ["fight", "flee", "flail"]
+
+displaymenu(choices):
+	#print out the menus in the program
+	#from a list it prints the choices index for the menu options
+getUserChoice(choices):
+INPUT = choices, the user choses a number of what they want to do
+OUTPUT = choice, the choice the user made 
+	#gets an integer from the user that is vaild in th evaild range
+	#returns an interger for the lost index
+calcDamage(item):
+	#takes in the string of the weapon the user is using 
+	#returns the integer for the damage it has done
+INPUT = the item the player is using
+OUTPUT = an integer which is the amount of damage the player does
+eat(food, player_health):
+	#calculates the health boost the player gets from eating 
+	#takes in the string name of the food
+	#takes in the health of player before eating
+	#computes the new health of the player
+	#returns integer, new health of player
+INPUT = takes in the current player health and the food they ate
+OUTPIUT = integer of how much the player health has increased
+fight(player_health, item, inventory):
+	#fight until the player or the monsters health is 0
+	#the player get 3 choices each 'round'(fight, flail, escape)
+	#calculates the damage the player does with that weapon
+	#calculates the damage the player does and the damage the player takes
+	#find the new health of the player if alive
+	#returns an integer, the health of the player after the fight
+INPUT = player health, the item the player using and the health of the monster
+OUTPUT = new player health, new monster health
+stay():
+	#asks the user for an integer
+	#if user decides to stay then random numer to see if they hvae to fight
+		#if user fights,fight(player_health,item,inventory)
+		#else user goes to 100 health and next day
+		#no distance is added
+leave(choices):
+	#calulates the chances of having one of these occur
+	#using random function find a random function between 1 and 10 inculsive
+		#1 or 2 the player find a back pack of food
+			#add distance
+			#choose a random food from th elist using the index of the list
+		#3 or 4 player finds the shed
+			#choose an item from the items list
+			#add distance
+		#5 or 6 player falls into a trench 
+			#add the half the distance they would have travlled
+			#go to the next next day
+		#7, 8 or 9 player has to fight
+			#fight(player_health,item,inventory)
+			#if player is alive after fight add distance
+		#10 nothing happens
+			#add distance 
+INOPUT = the integer from the random function
+OUTPUT = the option for that number as lister above
+win():
+	#let the player know they have made it back to civilization
+	#display final stats
+lose():
+	#let player know they have lost
+main():
+	#while the player health is abover 0 and has not travelled 150 miles and
+	#has not lived for 7 days(all these will be the constants above)
+		#show daily task menu
+		displaymenu(choices)
+		#do the daily tasks with choices being the input
+		getuserChoice(choices)
+		#ask if they want to leave or not
+		displaymenu(choices)
+		#if they want to stay
+		stay()
+		#if they want to leave
+		leave(choices)
+	#if player health is above 0 and its day 7 or has travalled 150 miles
+		#win()
+	#else
+		#lose()
+main()
+
+		
+		
+		
+
+

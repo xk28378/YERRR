@@ -1,0 +1,11 @@
+﻿  proj1.cpp
+c:\users\nehmy\desktop\comp sci\cmsc 202\project 1\project1\project1\proj1.cpp(12): error C2087: 'a': missing subscript
+c:\users\nehmy\desktop\comp sci\cmsc 202\project 1\project1\project1\proj1.cpp(25): error C2664: 'int loadfile(char [][])': cannot convert argument 1 from 'char [75][75]' to 'char [][]'
+  c:\users\nehmy\desktop\comp sci\cmsc 202\project 1\project1\project1\proj1.cpp(25): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+c:\users\nehmy\desktop\comp sci\cmsc 202\project 1\project1\project1\proj1.cpp(40): error C2087: 'a': missing subscript
+c:\users\nehmy\desktop\comp sci\cmsc 202\project 1\project1\project1\proj1.cpp(49): error C2664: 'void std::basic_ifstream<char,std::char_traits<char>>::open(const char *,std::ios_base::open_mode)': cannot convert argument 1 from 'char' to 'const std::experimental::filesystem::v1::path &'
+  c:\users\nehmy\desktop\comp sci\cmsc 202\project 1\project1\project1\proj1.cpp(49): note: Reason: cannot convert from 'char' to 'const std::experimental::filesystem::v1::path'
+  c:\users\nehmy\desktop\comp sci\cmsc 202\project 1\project1\project1\proj1.cpp(49): note: use of undefined type 'std::experimental::filesystem::v1::path'
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\fstream(35): note: see declaration of 'std::experimental::filesystem::v1::path'
+c:\users\nehmy\desktop\comp sci\cmsc 202\project 1\project1\project1\proj1.cpp(55): error C2065: 'i': undeclared identifier
+c:\users\nehmy\desktop\comp sci\cmsc 202\project 1\project1\project1\proj1.cpp(56): error C2065: 'i': undeclared identifier

@@ -1,0 +1,41 @@
+/*# File: proj1.cpp
+# Author: Nem Negash
+# Date: 02/16/19
+# Section: Section 07
+# E-mail: xk28378@umbc.edu*/
+
+#include <iostream>
+using namespace std;
+
+void mainMenu();
+
+
+int main(){
+cout << "Welcome to the ASCII Art tool" << endl;
+mainMenu()
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+void mainMenu(){
+cout << "1. Load ASCII Art form File" << endl;
+cout << "2. Create ASCII Art Manually" << endl;
+cout << "3. Display Art" << endl;
+cout << "4. Rotate Art" << endl;
+cout << "5. Invert Art" << endl;
+cout << "6. Exit" << endl;
+
+
+
+
+}
