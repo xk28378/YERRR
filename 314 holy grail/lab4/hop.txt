@@ -1,0 +1,54 @@
+function [ ] = polezero_plot( b,a,s_or_z,ROC)
+    if s_or_z == 's'
+       s = tf('s');
+       poles = roots(a);
+       zeros = roots(b);
+       for i = 1:length(zeros)
+           x = real(zeros);
+           y = imag(zeros);
+           h = fill(ROC,2,'r');
+           rectangle('Position',[ROC(1) -2 5 5], 'FaceColor',[1 0 0 0.2]);
+           plot(x,y,'o','MarkerSize',20); 
+           grid on
+           hold on
+           title('Transfer function');
+           xlabel('Re(s)');
+           ylabel('Im(s)');
+           axis square;
+       end 
+       
+       for i = 1:length(poles)
+           x1 = real(poles);
+           y1 = imag(poles);
+        %   axis (-5 3 -5 3);
+           plot(x1,y1,'x','MarkerSize',20); 
+       end 
+    end
+end
+r =
+
+  -0.5073 + 0.0000i
+   0.8889 + 0.0000i
+  -0.1908 - 0.3718i
+  -0.1908 + 0.3718i
+
+
+p =
+
+  -4.0000 + 0.0000i
+  -2.0000 + 0.0000i
+  -0.5000 + 0.7500i
+  -0.5000 - 0.7500i
+
+
+k =
+
+     []
+
+
+
+
+
+syms s t
+Hlap = (s^2 + 2*s + 5)/(s^4 + 7*s^3 + 14.8125*s^2 + 12.8750*s + 6.5000);
+Ht = ilaplace(Hlap,s,t)
