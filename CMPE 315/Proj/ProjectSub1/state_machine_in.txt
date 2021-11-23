@@ -1,0 +1,10 @@
+1 --Read Miss high
+0
+0
+0
+1 --reset high
+1 --Read miss high
+0
+0
+0
+0 --reset low

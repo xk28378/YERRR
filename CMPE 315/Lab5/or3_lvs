@@ -1,0 +1,90 @@
+@(#)$CDS: LVS version 6.1.7-64b 09/27/2016 19:41 (sjfhw305) $
+
+Command line: /afs/umbc.edu/software/cadence/installs/IC617/tools.lnx86/dfII/bin/64bit/LVS -dir /afs/umbc.edu/users/x/k/xk28378/home/315/LVS -l -s -t /afs/umbc.edu/users/x/k/xk28378/home/315/LVS/layout /afs/umbc.edu/users/x/k/xk28378/home/315/LVS/schematic
+Like matching is enabled.
+Net swapping is enabled.
+Using terminal names as correspondence points.
+
+    Net-list summary for /afs/umbc.edu/users/x/k/xk28378/home/315/LVS/layout/netlist
+       count
+        11              nets
+        6               terminals
+        6               pmos
+        6               nmos
+
+    Net-list summary for /afs/umbc.edu/users/x/k/xk28378/home/315/LVS/schematic/netlist
+       count
+        11              nets
+        6               terminals
+        6               pmos
+        6               nmos
+
+
+    Terminal correspondence points
+    N5        N0        gnd!
+    N8        N5        input1
+    N7        N2        input2
+    N6        N4        input3
+    N9        N3        output
+    N10       N1        vdd!
+
+Devices in the netlist but not in the rules:
+        pcapacitor pmos nmos
+
+The net-lists match.
+
+                             layout  schematic
+                                instances
+        un-matched              0       0      
+        rewired                 0       0      
+        size errors             0       0      
+        pruned                  0       0      
+        active                  12      12     
+        total                   12      12     
+
+                                  nets
+        un-matched              0       0      
+        merged                  0       0      
+        pruned                  0       0      
+        active                  11      11     
+        total                   11      11     
+
+                                terminals
+        un-matched              0       0      
+        matched but
+        different type          0       0      
+        total                   6       6      
+
+
+Probe files from /afs/umbc.edu/users/x/k/xk28378/home/315/LVS/schematic
+
+devbad.out:
+
+netbad.out:
+
+mergenet.out:
+
+termbad.out:
+
+prunenet.out:
+
+prunedev.out:
+
+audit.out:
+
+
+Probe files from /afs/umbc.edu/users/x/k/xk28378/home/315/LVS/layout
+
+devbad.out:
+
+netbad.out:
+
+mergenet.out:
+
+termbad.out:
+
+prunenet.out:
+
+prunedev.out:
+
+audit.out:
