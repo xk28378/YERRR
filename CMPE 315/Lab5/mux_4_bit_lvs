@@ -1,0 +1,109 @@
+@(#)$CDS: LVS version 6.1.7-64b 09/27/2016 19:41 (sjfhw305) $
+
+Command line: /afs/umbc.edu/software/cadence/installs/IC617/tools.lnx86/dfII/bin/64bit/LVS -dir /afs/umbc.edu/users/x/k/xk28378/home/315/LVS -l -s -t /afs/umbc.edu/users/x/k/xk28378/home/315/LVS/layout /afs/umbc.edu/users/x/k/xk28378/home/315/LVS/schematic
+Like matching is enabled.
+Net swapping is enabled.
+Using terminal names as correspondence points.
+Compiling Diva LVS rules...
+
+    Net-list summary for /afs/umbc.edu/users/x/k/xk28378/home/315/LVS/layout/netlist
+       count
+        176             nets
+        24              terminals
+        156             pmos
+        156             nmos
+
+    Net-list summary for /afs/umbc.edu/users/x/k/xk28378/home/315/LVS/schematic/netlist
+       count
+        176             nets
+        24              terminals
+        156             pmos
+        156             nmos
+
+
+    Terminal correspondence points
+    N161      N9        a<0>
+    N156      N12       a<1>
+    N152      N11       a<2>
+    N174      N10       a<3>
+    N172      N13       b<0>
+    N170      N16       b<1>
+    N168      N15       b<2>
+    N167      N14       b<3>
+    N164      N17       c<0>
+    N162      N20       c<1>
+    N157      N19       c<2>
+    N153      N18       c<3>
+    N175      N2        d<0>
+    N173      N23       d<1>
+    N171      N22       d<2>
+    N169      N21       d<3>
+    N155      N0        gnd!
+    N165      N6        out1<0>
+    N163      N5        out1<1>
+    N158      N4        out1<2>
+    N154      N3        out1<3>
+    N160      N7        sel0
+    N159      N8        sel1
+    N166      N1        vdd!
+
+Devices in the rules but not in the netlist:
+        cap nfet pfet nmos4 pmos4
+
+The net-lists match.
+
+                             layout  schematic
+                                instances
+        un-matched              0       0      
+        rewired                 0       0      
+        size errors             0       0      
+        pruned                  0       0      
+        active                  312     312    
+        total                   312     312    
+
+                                  nets
+        un-matched              0       0      
+        merged                  0       0      
+        pruned                  0       0      
+        active                  176     176    
+        total                   176     176    
+
+                                terminals
+        un-matched              0       0      
+        matched but
+        different type          0       0      
+        total                   24      24     
+
+
+Probe files from /afs/umbc.edu/users/x/k/xk28378/home/315/LVS/schematic
+
+devbad.out:
+
+netbad.out:
+
+mergenet.out:
+
+termbad.out:
+
+prunenet.out:
+
+prunedev.out:
+
+audit.out:
+
+
+Probe files from /afs/umbc.edu/users/x/k/xk28378/home/315/LVS/layout
+
+devbad.out:
+
+netbad.out:
+
+mergenet.out:
+
+termbad.out:
+
+prunenet.out:
+
+prunedev.out:
+
+audit.out:
