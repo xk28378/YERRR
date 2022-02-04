@@ -1,0 +1,21 @@
+The top 3 most important things to me in my next role are learning, 
+interesting work, and work-life balance. Learning is my number one priority especially since I am a new grad 
+and want to learn as much as possible to become a better engineer. I am also really interested in working on projects that 
+I find interesting (which Palantir has plenty of) 
+and finally I am also focused on having a good work-life balance so I don't feel burnt out after a couple of months of working.
+
+At my current position, I am working on a team that is creating on a cloud-native Mission Planning System web application for NASA.
+ My responsibilities on the project are to create GraphQL queries to get data from our database to the front-end, 
+help design the relational data model of the application and define and implement front-end features 
+that NASA mission planners requested to be added during our monthly demos.
+
+The current project I am on is by far the hardest thing I have worked on. The reason for that was because of the 
+huge learning curve there was at the beginning of the project and even now. I started working on this project as an intern 
+and when I joined the team I assumed I knew enough to contribute right away but I quickly learned that was not the case. 
+I had to learn about new tools that I had no experience with such as Docker, 
+AWS, and GraphQL very quickly to be able to complete the tasks I was given.
+
+I want to work at Palantir because of the impact the companies products have on the country and the world. Products 
+like Gotham helps save lives and keep this country safe. The idea of working on such impactful products is really cool and exciting. 
+I have also heard really great things about the culture of the company. One of my relatives worked at Palantir back when 
+they were a new grad and said it is a great place to learn and everyone is very supportive.
