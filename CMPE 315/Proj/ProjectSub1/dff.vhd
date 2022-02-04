@@ -23,11 +23,25 @@ component Dlatch
          q   : out std_logic;
          qbar: out std_logic); 
 end component;
-  signal in1,clk_bar, in2, mid1,mid2: std_logic;
+component inverter
+port(
+  input7: in std_logic;
+  output7: in std_logic
+);
+end component;
+component and2
+port(
+  input1: in std_logic;
+  input2: in std_logic;
+  output: out std_logic
+);
+end component;
+  signal in1,rst_bar,clk_bar, in2, mid1,mid2: std_logic;
 begin
-  clk_bar <= not clk;
-  in1 <= d and not rst;
-  in2 <= mid1 and not rst;
+  -- clk_bar <= not clk;
+  inverter1: inverter port map(clk, clk_bar);
+  -- in1 <= d and not rst;
+  -- in2 <= mid1 and not rst;
   Dlatch1: Dlatch port map(in1,clk,mid1,mid2);
   Dlatch2: Dlatch port map(in2,clk_bar,q,qbar);
   -- output: process                 

@@ -1,0 +1,120 @@
+*** Message Type: info ***
+When: Sun Nov 21 12:30:55 AM EST 2021
+SimVision started.
+Version: TOOL:  simvision       15.20-s035
+User: xk28378
+Host: ite375pc13.cs.umbc.edu
+Platform: Linux/x86_64/5.12.11-300.fc34.x86_64
+Started: Sun Nov 21 12:30:55 AM EST 2021
+Command: /afs/umbc.edu/software/cadence/software_2017/INCISIVE152/tools.lnx86/simvision/bin/simvision.exe -connect dc:ite375pc13.cs.umbc.edu:33653
+Work Directory: /afs/umbc.edu/users/x/k/xk28378/home/315/proj
+ 
+*** Message Type: info ***
+When: Sun Nov 21 12:30:55 AM EST 2021
+Create browser window: "Design Browser 1"
+ 
+*** Message Type: info ***
+When: Sun Nov 21 12:30:56 AM EST 2021
+Create console window: "Console"
+ 
+*** Message Type: info ***
+When: Sun Nov 21 12:30:57 AM EST 2021
+Connect to Simulator
+      Design: chip_test
+   Languages: vhdl
+   Simulator: NC-Sim
+     Version: TOOL:     ncsim   15.20-s035
+        User: xk28378
+        Host: ite375pc13.cs.umbc.edu
+Time Started: Sun Nov 21 12:30:55 AM EST 2021
+  Process ID: 567555
+   Directory: /afs/umbc.edu/users/x/k/xk28378/home/315/proj
+     Command: ncsim -gui -cdslib cds.lib -hdlvar hdl.var chip_test
+
+ 
+*** Message Type: info ***
+When: Sun Nov 21 12:30:57 AM EST 2021
+Create utility window: "Properties"
+ 
+*** Message Type: info ***
+When: Sun Nov 21 12:31:00 AM EST 2021
+Create waveform window: "Waveform 1"
+ 
+*** Message Type: info ***
+When: Sun Nov 21 12:35:02 AM EST 2021
+Delete waveform window: "Waveform 1"
+ 
+*** Message Type: info ***
+When: Sun Nov 21 12:35:38 AM EST 2021
+Create waveform window: "Waveform 2"
+ 
+*** Message Type: info ***
+When: Sun Nov 21 12:35:50 AM EST 2021
+Delete waveform window: "Waveform 2"
+ 
+*** Message Type: info ***
+When: Sun Nov 21 12:35:53 AM EST 2021
+Create waveform window: "Waveform 3"
+ 
+*** Message Type: info ***
+When: Sun Nov 21 12:38:27 AM EST 2021
+Delete waveform window: "Waveform 3"
+ 
+*** Message Type: info ***
+When: Sun Nov 21 12:38:31 AM EST 2021
+Create waveform window: "Waveform 4"
+ 
+*** Message Type: info ***
+When: Sun Nov 21 12:39:54 AM EST 2021
+Delete waveform window: "Waveform 4"
+ 
+*** Message Type: info ***
+When: Sun Nov 21 12:39:55 AM EST 2021
+Delete browser window: "Design Browser 1"
+ 
+*** Message Type: info ***
+When: Sun Nov 21 12:40:02 AM EST 2021
+Exit NC-Sim: user
+      Design: chip_test
+   Languages: vhdl
+   Simulator: NC-Sim
+     Version: TOOL:     ncsim   15.20-s035
+        User: xk28378
+        Host: ite375pc13.cs.umbc.edu
+Time Started: Sun Nov 21 12:30:55 AM EST 2021
+  Process ID: 567555
+   Directory: /afs/umbc.edu/users/x/k/xk28378/home/315/proj
+     Command: ncsim -gui -cdslib cds.lib -hdlvar hdl.var chip_test
+
+ 
+*** Message Type: error ***
+When: Sun Nov 21 12:40:02 AM EST 2021
+NC-Sim Crashed:
+      Design: chip_test
+   Languages: vhdl
+   Simulator: NC-Sim
+     Version: TOOL:     ncsim   15.20-s035
+        User: xk28378
+        Host: ite375pc13.cs.umbc.edu
+Time Started: Sun Nov 21 12:30:55 AM EST 2021
+  Process ID: 567555
+   Directory: /afs/umbc.edu/users/x/k/xk28378/home/315/proj
+     Command: ncsim -gui -cdslib cds.lib -hdlvar hdl.var chip_test
+      Design: chip_test
+   Languages: vhdl
+   Simulator: NC-Sim
+     Version: TOOL:     ncsim   15.20-s035
+        User: xk28378
+        Host: ite375pc13.cs.umbc.edu
+Time Started: Sun Nov 21 12:30:55 AM EST 2021
+  Process ID: 567555
+   Directory: /afs/umbc.edu/users/x/k/xk28378/home/315/proj
+     Command: ncsim -gui -cdslib cds.lib -hdlvar hdl.var chip_test
+
+Outstanding STRAP Requests:
+        strap::report enable out
+ 
+*** Message Type: info ***
+When: Sun Nov 21 12:40:07 AM EST 2021
+SimVision Exit.
+ 
