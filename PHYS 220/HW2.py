@@ -42,7 +42,6 @@ def partB():
     I_r = [];
     for num in r:
         I_r.append(((J(1,(k*num)))/(k*num))**2)
-    print(I_r)
     plt.figure();
     plt.plot(r,I_r);
 def main():
