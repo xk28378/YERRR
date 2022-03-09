@@ -1,0 +1,8 @@
+main ideas: 
+	message
+	publisher -> message -> subscribers
+	topic
+	queue
+	router -> exchanges
+message queue patterns fanout
+message patterns
