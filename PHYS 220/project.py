@@ -6,24 +6,22 @@ Created on Mon Apr 18 18:46:21 2022
 """
 
 from rocketpy import Environment, Rocket, SolidMotor, Flight
-import datetime
 
 Env = Environment(
     railLength=5.2,
-    latitude=39.2904,
-    longitude=76.6122,
-    elevation=33# Tomorrow's date in year, month, day, hour UTC format
+    latitude=-2.3153,
+    longitude=-44.3700,
+    elevation=34
 )
 
-tomorrow = datetime.date.today() + datetime.timedelta(days=14)
-print(tomorrow);
-
-Env.setDate(tomorrow.year, tomorrow.month, tomorrow.day, 12)  # Hour given in UTC time
-Env.setAtmosphericModel(type="Forecast", file="GFS")
-Env.info();
+# Env.setDate((2022, 5, 5, 18))
+# Env.setAtmosphericModel(type="Forecast", file="GFS")
+Env.setAtmosphericModel(type="CustomAtmosphere", pressure=87000, temperature=304.261, wind_u=[(0, 2.37), (1000, 10)],
+                          wind_v=[(0, -2.58), (500, 3), (1600, 2)])
+Env.allInfo();
 
 Pro75M1670 = SolidMotor(
-    thrustSource="Cesaroni_M1670.eng",
+    thrustSource="Cesaroni_M3100.eng",
     burnOut=3.9,
     grainNumber=5,
     grainSeparation=5 / 1000,
@@ -73,7 +71,7 @@ def mainTrigger(p, y):
     # activate main when vz < 0 m/s and z < 800 m.
     return True if y[5] < 0 and y[2] < 800 else False
 
-
+'''
 Main = Calisto.addParachute(
     "Main",
     CdS=10.0,
@@ -91,5 +89,7 @@ Drogue = Calisto.addParachute(
     lag=1.5,
     noise=(0, 8.3, 0.5),
 )
+'''
 TestFlight = Flight(rocket=Calisto, environment=Env, inclination=85, heading=0)
 TestFlight.allInfo()
+#brazil Env.setAtmosphericModel(type="CustomAtmosphere", pressure=None, temperature=354.15, wind_u=4.5, wind_v=4.5)
