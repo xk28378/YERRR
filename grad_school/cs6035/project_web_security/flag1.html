@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <div id="targetOutput"></div>
+    <div id="server-output">
+      <p>
+        TODO: Find a way to replace this message with server content from the
+        contact page. Hint: If you edit anything within this html div you are
+        going down a wrong path.
+      </p>
+    </div>
+
+    <script>
+      function getStudentAnswers() {
+        var organizationValue = "todo";
+        var selectedReplyByValue = "todo";
+        var sessionStorageValue = "todo";
+        var cookieName = "todo";
+        var cookieValue = "todo";
+
+        // TODO: set the values for City and State but only when the submit button is clicked
+
+        return {
+          organizationValue,
+          selectedReplyByValue,
+          sessionStorageValue,
+          cookieName,
+          cookieValue,
+        };
+      }
+    </script>
+    <script src="http://localhost:7149/contact/content-loader"></script>
+    <script>
+      fetchServerContent("http://localhost:7149/contact");
+    </script>
+  </body>
+</html>

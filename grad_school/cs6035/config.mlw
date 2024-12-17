@@ -1,0 +1,33 @@
+# MALHEUR (0.6.0) - Automatic Analysis of Malware Behavior
+# Copyright (c) 2009-2015 Konrad Rieck (konrad@mlsec.org)
+# University of Goettingen, Berlin Institute of Technology
+
+generic = {
+    # DO NOT CHANGE ANY SETTINGS IN generic
+    input_format     = "text";
+    event_delim      = ";";
+    state_dir        = "./malheur_state";
+    output_file      = "malheur.out";
+};
+
+features = {
+       ngram_len        = 1;
+       vect_embed       = "bin";
+};
+
+prototypes = {
+       max_dist = 0;
+       max_num  = 0;
+};
+
+classify = {
+       # DO NOT CHANGE THIS SETTING
+       max_dist = 1;
+};
+
+cluster = {
+       link_mode        = "complete";
+       min_dist         = 0.95;
+       reject_num       = 0;
+       shared_ngrams    = 0;
+};

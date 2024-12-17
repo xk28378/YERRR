@@ -3,30 +3,31 @@
 
 #include <linux/kernel.h>
 #include <linux/mutex.h>
+#include <linux/errno.h>
 #include "linked_list.h"
 
-typedef struct node {
+typedef struct bst_node {
   unsigned long priority;
-  struct linked_list_t* queue;
-  struct node_t* left;
-  struct node_t* right;
+  linked_list_t* queue;
+  struct bst_node* left;
+  struct bst_node* right;
   struct mutex lock;
-}node_t;
+}bst_node_t;
 
 typedef struct bst {
-  struct node_t* root;
-  int size++;
+  bst_node_t* root;
+  int size;
 }bst_t;
 
-struct node_t* find_priority(struct node_t* root, unsigned long priority){
-  struct node_t* temp = root;
+bst_node_t* find_priority(bst_node_t* root, unsigned long priority){
+  bst_node_t* temp = root;
 
   while (temp != NULL){
     if (temp->priority == priority){
       return temp;
-    } else if (temp->priority > priority)z[
+    } else if (temp->priority > priority){
       temp = temp->left;
-    ]else {
+    }else {
       temp = temp->right;
     }
   }
@@ -34,205 +35,208 @@ struct node_t* find_priority(struct node_t* root, unsigned long priority){
   return NULL;
 }
 
-long insert_node(struct node_t* current, unsigned long new_priority){
-  if (current == NULL){
-    return -1;
+long insert_bst_node(bst_node_t* curr, unsigned long new_priority){
+  if (curr == NULL){
+    return -ENOENT;
   }
 
-  if (current->priority > new_priority){
-    if (current->left == NULL){
-      current->left = kmalloc(sizeof(struct node_t));
-      current->left->priority = new_priority;
-      current->left->left = NULL;
-      current->left->right = NULL;
+  if (curr->priority > new_priority){
+    if (curr->left == NULL){
+      curr->left = kmalloc(sizeof(bst_node_t),GFP_KERNEL);
+      curr->left->priority = new_priority;
+      curr->left->left = NULL;
+      curr->left->right = NULL;
 
-      current->left->queue =  kmalloc(sizeof(struct linked_list_t));
-      current->left->queue->head = NULL;
-      current->left->queue->tail = NULL;
-      current->left->queue->size = 0;
-      mutex_init(&current->left->lock);
+      curr->left->queue =  kmalloc(sizeof(linked_list_t),GFP_KERNEL);
+      curr->left->queue->head = NULL;
+      curr->left->queue->tail = NULL;
+      curr->left->queue->size = 0;
+      mutex_init(&curr->left->lock);
     }else {
-      return insert_node(current->left,new_priority);
+      return insert_bst_node(curr->left,new_priority);
     }
-  }else if (current->priority < new_priority) {
-    if (current->right == NULL){
-      current->right = kmalloc(sizeof(struct node_t));
-      current->right->priority = new_priority;
-      current->right->left = NULL;
-      current->right->right = NULL;
+  }else if (curr->priority < new_priority) {
+    if (curr->right == NULL){
+      curr->right = kmalloc(sizeof(bst_node_t),GFP_KERNEL);
+      curr->right->priority = new_priority;
+      curr->right->left = NULL;
+      curr->right->right = NULL;
 
-      current->right->queue =  kmalloc(sizeof(struct linked_list_t));
-      current->right->queue->head = NULL;
-      current->right->queue->tail = NULL;
-      current->right->queue->size = 0;
-      mutex_init(&current->right->lock);
+      curr->right->queue =  kmalloc(sizeof(linked_list_t),GFP_KERNEL);
+      curr->right->queue->head = NULL;
+      curr->right->queue->tail = NULL;
+      curr->right->queue->size = 0;
+      mutex_init(&curr->right->lock);
     }else {
-      return insert_node(current->right,new_priority);
+      return insert_bst_node(curr->right,new_priority);
     }
   }else {
-    return -1;
+    return -EEXIST;
   }
   return 0;
 }
 
-long insert_priority(struct bst_t* bst, unsigned long priority){
+long insert_priority(bst_t* bst, unsigned long priority){
   if (bst == NULL || priority < 0 || priority > 100){
-    return -1;
+    return -EINVAL;
   }
-
+  
+  long status;
   if (bst->root == NULL){
-    bst->root = kmalloc(sizeof(struct node_t));
+    bst->root = kmalloc(sizeof(bst_node_t),GFP_KERNEL);
     bst->root->priority = priority;
     bst->root->left = NULL;
     bst->root->right = NULL;
 
-    bst->root->queue =  kmalloc(sizeof(struct linked_list_t));
+    bst->root->queue =  kmalloc(sizeof(linked_list_t),GFP_KERNEL);
     bst->root->queue->head = NULL;
     bst->root->queue->tail = NULL;
     bst->root->queue->size = 0;
     mutex_init(&bst->root->lock);
+    status = 0;
   }else {
     if(find_priority(bst->root, priority) != NULL){
-      return -1;
+      return -EEXIST;
     }
-    insert_node(bst->root,priority);
+    status = insert_bst_node(bst->root,priority);
+    
   }
-  bst->size++;
-  return 0;
+  bst->size += 1;
+  return status;
 }
 
-void clear_bst(struct node_t* current){
-  if (current == NULL){
+void clear_bst(bst_node_t* curr){
+  if (curr == NULL){
     return;
   }
-  clear_bst(current->left);
-  clear_bst(current->right);
-  clear_ll(current->queue);
-  kfree(current->queue);
-  kfree(current);
+  clear_bst(curr->left);
+  clear_bst(curr->right);
+  clear_ll(curr->queue);
+  kfree(curr->queue);
+  kfree(curr);
 }
 
-struct node_t* delete_node(struct node_t* current, unsigned long priority){
-  if (current == NULL){
+bst_node_t* delete_bst_node(bst_node_t* curr, unsigned long priority){
+  if (curr == NULL){
     return NULL;
   }
 
-  if (current->priority > priority){
-    current->left = delete_node(current->left, priority);
-  }else if (current->priority < priority){
-    current->right = delete_node(current->right, priority);
+  if (curr->priority > priority){
+    curr->left = delete_bst_node(curr->left, priority);
+  }else if (curr->priority < priority){
+    curr->right = delete_bst_node(curr->right, priority);
   }else {
-    if (current->left != NULL && current->right != NULL){
-      struct node_t* temp = current->left;
-      while(temp->right !+ NULL){
+    if (curr->left != NULL && curr->right != NULL){
+      bst_node_t* temp = curr->left;
+      while(temp->right != NULL){
         temp = temp->right;
       }
 
-      current->priority = temp->priority;
+      curr->priority = temp->priority;
 
-      clear_ll(current->queue);
-      kfree(current->queue);
-      current->queue = temp->queue;
+      clear_ll(curr->queue);
+      kfree(curr->queue);
+      curr->queue = temp->queue;
       temp->queue = NULL;
 
-      current->left = delete_node(current->left, temp->priority);
+      curr->left = delete_bst_node(curr->left, temp->priority);
     }else {
-      struct node_t* temp;
+      bst_node_t* temp;
 
-      if(current->left != NULL){
-        temp = current->left;
+      if(curr->left != NULL){
+        temp = curr->left;
       }else {
-        temp = current->right;
+        temp = curr->right;
       }
 
-      clear_ll(current->queue);
-      kfree(current->queue);
-      kfree(current);
+      clear_ll(curr->queue);
+      kfree(curr->queue);
+      kfree(curr);
 
       return temp;
     }
   }
-  return current;
+  return curr;
 }
 
-long remove_priority(struct bst_t* bst, unsigned long priority){
+long remove_priority(bst_t* bst, unsigned long priority){
   if (bst == NULL){
-    return -1;
+    return -EINVAL;
   }
 
   if(find_priority(bst->root, priority) == NULL){
-    return -1;
+    return -ENOENT;
   }
 
-  bst->root = delete_node(bst->root, priority);
-  bst->size--;
+  bst->root = delete_bst_node(bst->root, priority);
+  bst->size -= 1;
   return 0;
 }
 
-long add_pid(struct bst_t* bst, unsigned long priority, unsigned long pid){
+long add_pid(bst_t* bst, unsigned long priority, unsigned long pid){
   if (bst == NULL || bst->root == NULL){
-    return -1;
+    return -EINVAL;
   }
 
-  struct node_t* current = find_priority(bst->root, priority);
-  if(current == NULL){
-    return -1;
+  bst_node_t* curr = find_priority(bst->root, priority);
+  if(curr == NULL){
+    return -ENOENT;
   }
 
-  mutex_lock(&current->lock);
-  long status = push_back(current->queue, pid);
-  mutex_unlock(&current->lock);
+  mutex_lock(&curr->lock);
+  long status = push_back(curr->queue, pid);
+  mutex_unlock(&curr->lock);
 
   return status;
 }
 
-long dequeue_pid(struct bst_t* bst, unsigned long priority){
+long dequeue_pid(bst_t* bst, unsigned long priority){
    if (bst == NULL || bst->root == NULL){
-    return -1;
+    return -EINVAL;
   }
 
-  struct node_t* current = find_priority(bst->root, priority);
-  if(current == NULL){
-    return -1;
+  bst_node_t* curr = find_priority(bst->root, priority);
+  if(curr == NULL){
+    return -ENOENT;
   }
 
-  mutex_lock(&current->lock);
-  long status = pop_front(current->queue);
-  mutex_unlock(&current->lock);
+  mutex_lock(&curr->lock);
+  long status = pop_front(curr->queue);
+  mutex_unlock(&curr->lock);
 
   return status;
 }
 
-long print_pid(struct bst_t* bst, unsigned long priority){
+long print_pid(bst_t* bst, unsigned long priority){
    if (bst == NULL || bst->root == NULL){
-    return -1;
+    return -EINVAL;
   }
 
-  struct node_t* current = find_priority(bst->root, priority);
-  if(current == NULL){
-    return -1;
+  bst_node_t* curr = find_priority(bst->root, priority);
+  if(curr == NULL){
+    return -ENOENT;
   }
 
-  mutex_lock(&current->lock);
-  long status = read_front(current->queue);
-  printk("%lu", current->priority);
-  mutex_unlock(&current->lock);
+  mutex_lock(&curr->lock);
+  long status = read_front(curr->queue);
+  printk("%lu", curr->priority);
+  mutex_unlock(&curr->lock);
 
   return status;
 }
 
-long print_count(struct bst_t* bst, unsigned long priority){
+long print_count(bst_t* bst, unsigned long priority){
   if (bst == NULL || bst->root == NULL){
-    return -1;
+    return -EINVAL;
   }
 
-  struct node_t* current = find_priority(bst->root, priority);
+  bst_node_t* curr = find_priority(bst->root, priority);
 
-  if (current == NULL){
-    return -1;
+  if (curr == NULL){
+    return -ENOENT;
   }
 
-  printk("Queue with priority %lu has a pid count of: %d",priority, current->queue->size);
+  printk("Queue with priority %lu has a pid count of: %d",priority, curr->queue->size);
   return 0;
 }
 

@@ -5,21 +5,21 @@
 
 typedef struct list_node {
   unsigned long pid;
-  struct list_node_t* next;
+  struct list_node* next;
 } list_node_t;
 
 typedef struct linked_list {
-  struct list_node_t* head;
-  struct list_node_t* tail;
+  list_node_t* head;
+  list_node_t* tail;
   int size;
 }linked_list_t;
 
-long push_back(struct linked_list_t* list, int new_pid){
+long push_back(linked_list_t* list, int new_pid){
   if (list == NULL){
     return -1;
   }
 
-  struct list_node_t* new_node = kmalloc(sizeof(struct list_node_t));
+  list_node_t* new_node = kmalloc(sizeof(list_node_t),GFP_KERNEL);
   new_node->pid = new_pid;
   new_node->next = NULL;
 
@@ -31,11 +31,11 @@ long push_back(struct linked_list_t* list, int new_pid){
     list->tail = new_node;
   }
 
-  list->size++;
+  list->size += 1;
   return 0;
 }
 
-long read_front(struct linked_list_t* list){
+long read_front(linked_list_t* list){
   if(list == NULL || list->head == NULL){
     return -1;
   }
@@ -43,23 +43,23 @@ long read_front(struct linked_list_t* list){
   return 0;
 }
 
-long pop_front(struct linked_list_t* list){
+long pop_front(linked_list_t* list){
   if(list == NULL || list->head == NULL){
     return -1;
   }
 
   read_front(list);
 
-  struct list_node_t* new_head = list->head->next;
+  list_node_t* new_head = list->head->next;
   kfree(list->head);
 
   list->head = new_head;
-  list->size--;
+  list->size -= 1;
 
   return 0;
 }
 
-void delete_list(struct list_node_t*node){
+void delete_list(list_node_t*node){
   if (node->next != NULL){
     delete_list(node->next);
   }
@@ -67,7 +67,7 @@ void delete_list(struct list_node_t*node){
   kfree(node);
 }
 
-long clear_ll(struct linked_list_t* list){
+long clear_ll(linked_list_t* list){
   if (list == NULL || list->head == NULL){
     return -1;
   }
@@ -76,7 +76,7 @@ long clear_ll(struct linked_list_t* list){
   return 0;
 }
 
-void print_node(struct list_node_t* node){
+void print_node(list_node_t* node){
   if (node == NULL){
     printk("NULL\n");
   }
@@ -84,7 +84,7 @@ void print_node(struct list_node_t* node){
   print_node(node->next);
 }
 
-void display_ll(struct linked_list_t* list){
+void display_ll(linked_list_t* list){
   if (list == NULL){
     return;
   }
