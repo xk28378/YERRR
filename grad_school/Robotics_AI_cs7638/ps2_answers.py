@@ -87,10 +87,10 @@ dimensions = 4
 # What is the new F matrix for a Kalman filter in 2 dimensions?
 # Replace the n's with your answers
 #
-F = ([[n, n, n, n], \
-      [n, n, n, n], \
-      [n, n, n, n], \
-      [n, n, n, n]])
+F = ([[1, 0, 0.1, 0], \
+      [0, 1, 0, 0.1], \
+      [0, 0, 1, 0], \
+      [0, 0, 0, 1]])
 
 
 # QUESTION 6: PROGRAMMING EXERCISE
@@ -103,26 +103,26 @@ F = ([[n, n, n, n], \
 # Please do not delete or modify
 # any provided code. Good luck!
 #
-Matrices_P =  ([[n, n, n, n], \
-                [n, n, n, n], \
-                [n, n, n, n], \
-                [n, n, n, n]])
+Matrices_P =  ([[0, 0, 0, 0], \
+                [0, 0, 0, 0], \
+                [0, 0, 1000, 0], \
+                [0, 0, 0, 1000]])
 
-Matrices_F  =  ([[n, n, n, n], \
-                 [n, n, n, n], \
-                 [n, n, n, n], \
-                 [n, n, n, n]])
+Matrices_F  =  ([[1, 0, 0.1, 0], \
+                [0, 1, 0, 0.1], \
+                [0, 0, 1, 0], \
+                [0, 0, 0, 1]])
 
-Matrices_H =  ([[n, n, n, n], \
-                [n, n, n, n]])
+Matrices_H =  ([[1, 0, 0, 0], \
+                [0, 1, 0, 0]])
 
-Matrices_R =  ([[n, n], \
-                [n, n]])
+Matrices_R =  ([[0.1, 0], \
+                [0, 0.1]])
 
-Matrices_I = ([[n, n, n, n], \
-               [n, n, n, n], \
-               [n, n, n, n], \
-               [n, n, n, n]])
+Matrices_I = ([[1, 0, 0, 0], \
+               [0, 1, 0, 0], \
+               [0, 0, 1, 0], \
+               [0, 0, 0, 1]])
 
 
 ######################################################################
