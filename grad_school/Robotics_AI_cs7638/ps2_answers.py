@@ -61,7 +61,7 @@ update = possible_answers[0]
 # What is the value for Nu squared as a multiple of Sigma squared?
 # Replace n with your answer
 #
-variance = n
+variance = 0.5
 
 
 
@@ -71,7 +71,7 @@ variance = n
 #
 possible_answers = ( 'YES',
                      'NO' )
-heavytail = ''
+heavytail = possible_answers[1]
 
 
 
@@ -80,7 +80,7 @@ heavytail = ''
 # How many dimensions of the state vector for 2-dimensional space?
 # Replace n with your answer
 #
-dimensions = n
+dimensions = 4
 
 # QUESTION 5: STATE TRANSITION MATRIX
 #
