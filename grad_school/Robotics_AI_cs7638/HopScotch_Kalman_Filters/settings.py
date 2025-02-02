@@ -10,7 +10,7 @@ FAILURE_AGENT_OUT_OF_BOUNDS = 'Failed: Agent Out of Bounds'  # Custom failure st
 FAILURE_ASTEROID_OUT_OF_JUMP_RANGE = 'Failed: Jump Range Exceeded'  # Custom failure states for defense.
 FAILURE_TIME_STEP_LIMIT_EXCEEDED = 'Failed: Time step limit Exceeded'  # Custom failure states for defense.
 DISPLAY_ASTEROID_MATCH_RANGE = True
-DISPLAY_ORIGIN_TO_DESTINATION_LINE = False
+DISPLAY_ORIGIN_TO_DESTINATION_LINE = True
 DISPLAY_ESTIMATED_SPACESHIP_MATCH_RANGE = True
 LIGHT_BLUE_COLOR = '#6775d5'
 
@@ -33,7 +33,7 @@ runner_settings = {
 FIELD_X_BOUNDS = (0, 2)
 FIELD_Y_BOUNDS = (0, 2)
 IN_BOUNDS = {"x_bounds": FIELD_X_BOUNDS, "y_bounds": FIELD_Y_BOUNDS}
-SLEEP_CONSTANT = 0.0
+SLEEP_CONSTANT = 1.0
 asteroid_attributes = {'size': ['small', 'medium', 'large'],
                         'color': ['red', 'green', 'blue'],
                         'form': ['fire', 'ice', 'rock']}

@@ -13,6 +13,7 @@
 # indication that you are uploading a different file than the one you are
 # executing locally. If this local ID doesn't match the ID on Gradescope then
 # you uploaded a different file.
+from rait import matrix
 OUTPUT_UNIQUE_FILE_ID = False
 if OUTPUT_UNIQUE_FILE_ID:
     import hashlib, pathlib
@@ -28,6 +29,13 @@ class Spaceship():
         self.x_bounds = bounds['x']
         self.y_bounds = bounds['y']
         self.agent_pos_start = xy_start
+        self.states = {}
+        self.P = matrix([[1., 0, 0, 0, 0, 0], [0, 1., 0, 0, 0, 0],[0, 0, 1., 0, 0, 0],[0, 0, 0, 1., 0, 0],[0, 0, 0, 0, 1., 0],[0, 0, 0, 0, 0, 1.]])  # initial uncertainty
+        self.F = matrix([[1., 0, 1., 0, 0.5, 0], [0, 1., 0, 1., 0, 0.5],[0, 0, 1., 0, 1., 0],[0, 0, 0, 1., 0, 1.],[0, 0, 0, 0, 1., 0],[0, 0, 0, 0, 0, 1.]])  # next state function
+        self.H = matrix([[1., 0, 0, 0, 0, 0], [0, 1., 0, 0, 0, 0]])  # measurement function
+        self.R = matrix([[1., 0], [0, 1.]])  # measurement uncertainty
+        self.Q = matrix([[1., 0, 0, 0, 0, 0], [0, 1., 0, 0, 0, 0],[0, 0, 1., 0, 0, 0],[0, 0, 0, 1., 0, 0],[0, 0, 0, 0, 1., 0],[0, 0, 0, 0, 0, 1.]])  # process uncertainty
+        self.I = matrix([[1., 0, 0, 0, 0, 0], [0, 1., 0, 0, 0, 0],[0, 0, 1., 0, 0, 0],[0, 0, 0, 1., 0, 0],[0, 0, 0, 0, 1., 0],[0, 0, 0, 0, 0, 1.]])  # identity matrix
 
 
     def predict_from_observations(self, asteroid_observations):
@@ -66,8 +74,26 @@ class Spaceship():
         # return asteroid_observations
 
         # FOR STUDENT TODO: Update the Spaceship's estimate of where the asteroids will be located in the next time step
-        print(asteroid_observations)
-        return {-1: (5.5, 5.5)}
+        updated_asteroid_positions = {}
+        for asteroid_id, (x, y) in asteroid_observations.items():
+            if asteroid_id not in self.states:
+                self.states[asteroid_id] = matrix([[x], [y], [0], [0], [0], [0]])
+            else: 
+            # observation update
+              Z = matrix([[x], [y]])
+              delta_z = Z - (self.H * self.states[asteroid_id])
+              S = (self.H * self.P * self.H.transpose()) + self.R
+              K = self.P * self.H.transpose() * S.inverse()
+              x_squared = delta_z.transpose() * S.inverse() * delta_z
+              self.states[asteroid_id] = self.states[asteroid_id] + (K * delta_z)
+              self.P = (self.I - (K * self.H)) * self.P
+            
+            # prediction
+            self.states[asteroid_id] = (self.F * self.states[asteroid_id])
+            self.P = (self.F * self.P * self.F.transpose()) + self.Q
+            updated_asteroid_positions[asteroid_id] = (self.states[asteroid_id].value[0][0], self.states[asteroid_id].value[1][0])
+        print(self.states)
+        return updated_asteroid_positions
 
     def jump(self, asteroid_observations, agent_data):
         """ Return the id of the asteroid the spaceship should jump/hop onto in the next timestep
