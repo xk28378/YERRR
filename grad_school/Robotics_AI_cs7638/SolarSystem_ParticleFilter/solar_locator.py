@@ -47,6 +47,35 @@ def estimate_next_pos(gravimeter_measurement, get_theoretical_gravitational_forc
             A list of tuples like (x,y,h) to plot for the visualization
     """
     # time.sleep(1)  # uncomment to pause for the specified seconds each timestep
+    N = 400
+    world_size = 4*AU
+    def random_sign():
+        return 1 if random.random() > 0.5 else -1
+    def move(position, distance, steering):
+        x, y, theta = position
+        
+        new_theta = (theta + steering + random.gauss(0, 0.1)) % (2*pi)
+        
+        dist = distance + random.gauss(0, 0.1)
+        new_x = x + (dist * cos(new_theta))
+        new_y = y + (dist * sin(new_theta))
+        new_x %= world_size
+        new_y %= world_size
+        return (new_x, new_y, new_theta)
+        
+        # move, and add randomness to the motion
+    if other is None:
+        other = {
+            'particles': [(random_sign()*random.random()*AU, random_sign()*random.random()*AU, random.random()*2*pi) for _ in range(N)],
+        }
+    
+    p2 = []
+    for i in range(N):
+        p2.append(move(other['particles'][i], distance, steering))
+    other['particles'] = p2
+    
+    
+    
 
     # example of how to get the gravity magnitude at a point in the solar system:
     gravity_magnitude = get_theoretical_gravitational_force_at_point(-1*AU, 1*AU)
