@@ -46,35 +46,120 @@ def estimate_next_pos(gravimeter_measurement, get_theoretical_gravitational_forc
         optional_points_to_plot: List[Tuple[float, float, float]].
             A list of tuples like (x,y,h) to plot for the visualization
     """
-    # time.sleep(1)  # uncomment to pause for the specified seconds each timestep
-    N = 400
-    world_size = 4*AU
+    # time.sleep(2)  # uncomment to pause for the specified seconds each timestep
     def random_sign():
         return 1 if random.random() > 0.5 else -1
-    def move(position, distance, steering):
-        x, y, theta = position
+    
+    def get_fuzz_distance():
+        return random_sign() * random.random() * 10.0e9
+    def get_fuzz_angle():
+        return random_sign() * random.random() * pi
+    def move(particles, distance, steering):
         
-        new_theta = (theta + steering + random.gauss(0, 0.1)) % (2*pi)
+        new_particles = []
+        for x, y, theta in particles:
         
-        dist = distance + random.gauss(0, 0.1)
-        new_x = x + (dist * cos(new_theta))
-        new_y = y + (dist * sin(new_theta))
-        new_x %= world_size
-        new_y %= world_size
-        return (new_x, new_y, new_theta)
+            radius = 10.2 / tan(steering)
+            x_dis = sin(theta) * radius
+            y_dis = cos(theta) * radius
+            center_x = x - x_dis
+            center_y = y + y_dis
+            
+            beta = distance / radius
+            
+            x_dis_new = sin(theta + beta) * radius
+            y_dis_new = cos(theta + beta) * radius
+            new_x = center_x + x_dis_new
+
+            new_y = center_y - y_dis_new
+
+            new_theta = (theta + beta) % (2*pi)
+            
+            new_particles.append((new_x, new_y, new_theta))
+        return new_particles
         
         # move, and add randomness to the motion
+    
+    def Gaussian(mu, sigma, x):
+        return exp(-((mu-x)**2) / (2*sigma**2) / 2.0) / sqrt(2.0*pi*(sigma**2))
+    
+    def measurement_prob(particle, measurement, sigma):
+        x, y, _ = particle
+        particle_measurement = get_theoretical_gravitational_force_at_point(x, y)
+        return Gaussian(particle_measurement, sigma, measurement)
+        
+        # Combined weight (product of position and heading weights)
+        # return gravity_weight * heading_weight
+    # Initialize the particle filter
     if other is None:
-        other = {
-            'particles': [(random_sign()*random.random()*AU, random_sign()*random.random()*AU, random.random()*2*pi) for _ in range(N)],
-        }
+        # Initialize particles with position and heading
+        num_particles = 10000
+        particles = []
+        for _ in range(num_particles):
+            x = random.uniform(-4 * AU, 4 * AU)
+            y = random.uniform(-4 * AU, 4 * AU)
+            heading = (atan2(y,x) + (pi/2)) % (2 * pi)
+            particles.append((x, y, heading))
+        other = {'particles': particles, 'weights': [1.0 / num_particles] * num_particles, 'N': num_particles, 'fuzz_percentage': 0.5, 'sigma': 1.0e-7}
+    N = other['N']
+    fuzz_percentage = other['fuzz_percentage']
+    particles = other['particles'] #other['particles']
     
-    p2 = []
+    start = time.time()
+    # Update weights based on the gravimeter measurement
+    w = []
     for i in range(N):
-        p2.append(move(other['particles'][i], distance, steering))
-    other['particles'] = p2
+        w.append(measurement_prob(particles[i], gravimeter_measurement, other['sigma']))
+    # print('Time to calculate weights:', time.time() - start)
+    # Normalize weights
+    total_weight = sum(w) + 1.0e-300
+    w = [weight / total_weight for weight in w]
+    # print(w)
+    # print('Time to normalize weights:', time.time() - start)
+    # Resample particles based on weights
+    new_particles = []
+    index = int(random.random() * N)
+    beta = 0.0
+    mw = max(w)
+    for i in range(N):
+        beta += random.random() * 2 * mw
+        while beta > w[index]:
+            beta -= w[index]
+            index = (index + 1) % N
+        new_particles.append(particles[index])
+    # print('Time to resample:', time.time() - start)
+    # Update the particles
+    particles = new_particles
     
+    # Fuzz a percentage of the particles to diversify the hypotheses
+    num_fuzz = int(fuzz_percentage * N)
+    for _ in range(num_fuzz):
+        idx = random.randint(0, N - 1)
+        x, y, theta = particles[idx]
+        # Add Gaussian noise to the position and heading
+        x += random.gauss(0, 1e-2 * AU)  
+        y += random.gauss(0, 1e-2 * AU)
+        theta += random.gauss(0, 0.001) 
+        theta %= (2 * pi) 
+        particles[idx] = (x, y, theta)
+    # print('Time to fuzz:', time.time() - start)
+    particles = move(particles, distance, steering)
+    # print('Time to move:', time.time() - start)
+    # Estimate the next position as the mean of the particles
+    sum_x = [particles[i][0] for i in range(N)]
+    sum_y = [particles[i][1] for i in range(N)]
+    x_estimate = sum(x * y for x, y in zip(sum_x, w))
+    y_estimate = sum(x * y for x, y in zip(sum_y, w))
+    # print(x_estimate, y_estimate)
+    # print('Time to estimate:', time.time() - start)
+    other['particles'] = particles
+    other['N'] = 2000
+    other['fuzz_percentage'] = .9
+    # print('')
     
+    # Optional points to plot (for visualization)
+    
+    return (x_estimate, y_estimate), other, other['particles']
     
 
     # example of how to get the gravity magnitude at a point in the solar system:
@@ -82,7 +167,7 @@ def estimate_next_pos(gravimeter_measurement, get_theoretical_gravitational_forc
 
     # TODO - remove this canned answer which makes this template code
     # pass one test case once you start to write your solution....
-    xy_estimate = (139048139368.39096, -2225218287.6720667)
+    xy_estimate = (0,0) #(139048139368.39096, -2225218287.6720667)
 
     # You may optionally also return a list of (x,y,h) points that you would like
     # the PLOT_PARTICLES=True visualizer to plot for visualization purposes.
@@ -91,7 +176,7 @@ def estimate_next_pos(gravimeter_measurement, get_theoretical_gravitational_forc
     optional_points_to_plot = [(1*AU, 1*AU), (2*AU, 2*AU), (3*AU, 3*AU)]  # Sample (x,y) to plot
     optional_points_to_plot = [(1*AU, 1*AU, 0.5), (2*AU, 2*AU, 1.8), (3*AU, 3*AU, 3.2)]  # (x,y,heading)
 
-    return xy_estimate, other, optional_points_to_plot
+    return xy_estimate, other, other['particles']
 
 
 def next_angle(solar_system, percent_illuminated_measurements, percent_illuminated_sense_func,
@@ -127,16 +212,29 @@ def next_angle(solar_system, percent_illuminated_measurements, percent_illuminat
         optional_points_to_plot: List[Tuple[float, float, float]].
             A list of tuples like (x,y,h) to plot for the visualization
     """
+    num_particles = 10000
+    particles = []
+    if other is None:
+        # Initialize particles with position and heading
+        for _ in range(num_particles):
+            x = random.uniform(-4 * AU, 4 * AU)
+            y = random.uniform(-4 * AU, 4 * AU)
+            heading = (atan2(y,x) + (pi/2)) % (2 * pi)
+            particles.append((x, y, heading))
+        other = {'particles': particles, 'weights': [1.0 / num_particles] * num_particles, 'N': num_particles, 'fuzz_percentage': 0.5, 'sigma': 0.95}
+    
+    def sense(x,y):
+        return percent_illuminated_sense_func(x,y)[-1]
+    
+    (x,y) , other, particles = estimate_next_pos(percent_illuminated_measurements[-1], sense, distance, steering, other)
+    
+    home = solar_system.move_body(solar_system.planets[-1])
+    (home_x, home_y) = home.r
 
     # At what angle to send an SOS message this timestep
-    bearing = 0.0
-    xy_estimate = (110172640485.32968, -66967324464.19617)
+    bearing = atan2(home_y - y, home_x - x)
 
-    # You may optionally also return a list of (x,y) or (x,y,h) points that
-    # you would like the PLOT_PARTICLES=True visualizer to plot.
-    optional_points_to_plot = [ (1*AU,1*AU), (2*AU,2*AU), (3*AU,3*AU) ]  # Sample plot points
-
-    return bearing, xy_estimate, other, optional_points_to_plot
+    return bearing, (x,y), other, particles
 
 
 def who_am_i():

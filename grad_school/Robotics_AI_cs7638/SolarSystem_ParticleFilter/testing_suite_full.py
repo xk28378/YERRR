@@ -35,14 +35,14 @@ TIME_LIMIT = 15  # seconds
 # Additional flags for debug output and visualization
 ########################################################################
 VERBOSE = False  # False for grading
-PLOT_PARTICLES = True  # False for grading  (Set to True for Visualization!)
+PLOT_PARTICLES = False  # False for grading  (Set to True for Visualization!)
 PAUSE_FIRST = False  # Pause button for visualization enabled at first time step
-PAUSE_DURATION = 3  # Number of seconds to pause for (increase TIME_LIMIT accordingly)
+PAUSE_DURATION = 10  # Number of seconds to pause for (increase TIME_LIMIT accordingly)
 
 ########################################################################
 # Toggles for different parts of the assignment
 ########################################################################
-PART_A = True  # Enable/disable Part A (Estimation) - True for grading
+PART_A = False  # Enable/disable Part A (Estimation) - True for grading
 PART_B = True  # Enable/disable Part B (Steering) - True for grading
 
 ########################################################################
