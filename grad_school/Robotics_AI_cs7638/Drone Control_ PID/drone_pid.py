@@ -9,6 +9,7 @@
 #
 ######################################################################
 
+WEIGHTS = [0.82, 0.13, 0.05]
 
 def pid_thrust(target_elevation, drone_elevation, tau_p=0, tau_d=0, tau_i=0, data: dict() = {}):
     '''
@@ -32,9 +33,24 @@ def pid_thrust(target_elevation, drone_elevation, tau_p=0, tau_d=0, tau_i=0, dat
             Reserved keys:
                 max_rpm_reached: (True|False) - Whether Drone has reached max RPM in both its rotors.
     '''
-
+    if data.get("max_rpm_reached", 0) == True:
+        return 0, data
+    
     thrust = 0
-
+    
+    if data.get("crosstrack_error") == None:
+        data["crosstrack_error"] = target_elevation - drone_elevation
+    if data.get("int_crosstrack_error") == None:
+        data["int_crosstrack_error"] = 0.0
+    
+    new_crosstrack_error = target_elevation - drone_elevation
+    diff_crosstrack_error = new_crosstrack_error - data["crosstrack_error"]
+    data["crosstrack_error"] = new_crosstrack_error
+    data["int_crosstrack_error"] += data["crosstrack_error"]
+    thrust = tau_p * data["crosstrack_error"] \
+        + tau_d * diff_crosstrack_error \
+        + tau_i * data["int_crosstrack_error"]
+    # print(thrust, data)
     return thrust, data
 
 
@@ -59,6 +75,19 @@ def pid_roll(target_x, drone_x, tau_p=0, tau_d=0, tau_i=0, data:dict() = {}):
     '''
 
     roll = 0
+
+    if data.get("crosstrack_error") == None:
+        data["crosstrack_error"] = drone_x - target_x
+    if data.get("int_crosstrack_error") == None:
+        data["int_crosstrack_error"] = 0.0
+    
+    new_crosstrack_error =  drone_x - target_x
+    diff_crosstrack_error = new_crosstrack_error - data["crosstrack_error"]
+    data["crosstrack_error"] = new_crosstrack_error
+    data["int_crosstrack_error"] += data["crosstrack_error"]
+    roll = tau_p * data["crosstrack_error"] \
+        + tau_d * diff_crosstrack_error \
+        + tau_i * data["int_crosstrack_error"]
 
     return roll, data
 
@@ -91,19 +120,45 @@ def find_parameters_thrust(run_callback, tune='thrust', DEBUG=False, VISUALIZE=F
     '''
 
     # Initialize a list to contain your gain values that you want to tune
-    params = [0,0,0]
+    p = [0.,0.,0.]
+    dp = [1.,1.,0.]
+    
+    def callback(p):
+        hover_error, max_allowed_velocity, drone_max_velocity, max_allowed_oscillations, total_oscillations = run_callback(thrust_params= {'tau_p': p[0], 'tau_d': p[1], 'tau_i': p[2]})
+        velocity_error = abs(max_allowed_velocity - drone_max_velocity)
+        oscillations_error = abs(max_allowed_oscillations - total_oscillations)
+        return WEIGHTS[0] * hover_error + WEIGHTS[1] * velocity_error + WEIGHTS[2] * oscillations_error
+    
+    best_error = callback(p)
+    
+    while sum(dp) > 0.001:
+        for i in range(len(p)):
+            p[i] += dp[i]
+            error = callback(p)
+            if error < best_error:
+                best_error = error
+                dp[i] *= 1.1
+            else:
+                p[i] -= 2*dp[i]
+                error = callback(p)
+                if error < best_error:
+                    best_error = error
+                    dp[i] *= 1.1
+                else:
+                    p[i] += dp[i]
+                    dp[i] *= 0.9
 
     # Create dicts to pass the parameters to run_callback
-    thrust_params = {'tau_p': params[0], 'tau_d': params[1], 'tau_i': params[2]}
+    thrust_params = {'tau_p': p[0], 'tau_d': p[1], 'tau_i': p[2]}
 
     # If tuning roll, then also initialize gain values for roll PID controller
     roll_params   = {'tau_p': 0, 'tau_d': 0, 'tau_i': 0}
 
-    # Call run_callback, passing in the dicts of thrust and roll gain values
-    hover_error, max_allowed_velocity, drone_max_velocity, max_allowed_oscillations, total_oscillations = run_callback(thrust_params, roll_params, VISUALIZE=VISUALIZE)
+    # # Call run_callback, passing in the dicts of thrust and roll gain values
+    # hover_error, max_allowed_velocity, drone_max_velocity, max_allowed_oscillations, total_oscillations = run_callback(thrust_params, roll_params, VISUALIZE=VISUALIZE)
 
-    # Calculate best_error from above returned values
-    best_error = None
+    # # Calculate best_error from above returned values
+    # best_error = None
 
     # Implement your code to use twiddle to tune the params and find the best_error
 
@@ -138,26 +193,70 @@ def find_parameters_with_int(run_callback, tune='thrust', DEBUG=False, VISUALIZE
 
     '''
 
-    # Initialize a list to contain your gain values that you want to tune, e.g.,
-    params = [0,0,0]
+    p = [0.,0.,0.]
+    dp = [1.,1.,1.]
+
+    def callback(p):
+        hover_error, max_allowed_velocity, drone_max_velocity, max_allowed_oscillations, total_oscillations = run_callback(thrust_params= {'tau_p': p[0], 'tau_d': p[1], 'tau_i': p[2]})
+        velocity_error = abs(max_allowed_velocity - drone_max_velocity)
+        oscillations_error = abs(max_allowed_oscillations - total_oscillations)
+        return WEIGHTS[0] * hover_error + WEIGHTS[1] * velocity_error + WEIGHTS[2] * oscillations_error
+
+    best_error = callback(p)
+
+    while sum(dp) > 0.001:
+        for i in range(len(p)):
+            p[i] += dp[i]
+            error = callback(p)
+            if error < best_error:
+                best_error = error
+                dp[i] *= 1.1
+            else:
+                p[i] -= 2*dp[i]
+                error = callback(p)
+                if error < best_error:
+                    best_error = error
+                    dp[i] *= 1.1
+                else:
+                    p[i] += dp[i]
+                    dp[i] *= 0.9
 
     # Create dicts to pass the parameters to run_callback
-    thrust_params = {'tau_p': params[0], 'tau_d': params[1], 'tau_i': params[2]}
+    thrust_params = {'tau_p': p[0], 'tau_d': p[1], 'tau_i': p[2]}
 
     # If tuning roll, then also initialize gain values for roll PID controller
     roll_params   = {'tau_p': 0, 'tau_d': 0, 'tau_i': 0}
 
-    # Call run_callback, passing in the dicts of thrust and roll gain values
-    hover_error, max_allowed_velocity, drone_max_velocity, max_allowed_oscillations, total_oscillations = run_callback(thrust_params, roll_params, VISUALIZE=VISUALIZE)
+    # # Call run_callback, passing in the dicts of thrust and roll gain values
+    # hover_error, max_allowed_velocity, drone_max_velocity, max_allowed_oscillations, total_oscillations = run_callback(thrust_params, roll_params, VISUALIZE=VISUALIZE)
 
-    # Calculate best_error from above returned values
-    best_error = None
+    # # Calculate best_error from above returned values
+    # best_error = None
 
     # Implement your code to use twiddle to tune the params and find the best_error
 
     # Return the dict of gain values that give the best error.
 
     return thrust_params, roll_params
+    
+
+    # # Create dicts to pass the parameters to run_callback
+    # thrust_params = {'tau_p': params[0], 'tau_d': params[1], 'tau_i': params[2]}
+
+    # # If tuning roll, then also initialize gain values for roll PID controller
+    # roll_params   = {'tau_p': 0, 'tau_d': 0, 'tau_i': 0}
+
+    # # Call run_callback, passing in the dicts of thrust and roll gain values
+    # hover_error, max_allowed_velocity, drone_max_velocity, max_allowed_oscillations, total_oscillations = run_callback(thrust_params, roll_params, VISUALIZE=VISUALIZE)
+
+    # # Calculate best_error from above returned values
+    # best_error = None
+
+    # Implement your code to use twiddle to tune the params and find the best_error
+
+    # Return the dict of gain values that give the best error.
+
+    return find_parameters_thrust(run_callback, tune, DEBUG, VISUALIZE)
 
 def find_parameters_with_roll(run_callback, tune='both', DEBUG=False, VISUALIZE=False):
     '''
@@ -186,19 +285,45 @@ def find_parameters_with_roll(run_callback, tune='both', DEBUG=False, VISUALIZE=
 
     '''
     # Initialize a list to contain your gain values that you want to tune, e.g.,
-    params = [0,0,0]
+    p = [0.,0.,0.,0.,0.,0.]
+    dp = [1.,1.,0.,1.,1.,0.]
+    
+    def callback(p):
+        hover_error, max_allowed_velocity, drone_max_velocity, max_allowed_oscillations, total_oscillations = run_callback(thrust_params= {'tau_p': p[0], 'tau_d': p[1], 'tau_i': p[2]}, roll_params= {'tau_p': p[3], 'tau_d': p[4], 'tau_i': p[5]})
+        velocity_error = abs(max_allowed_velocity - drone_max_velocity)
+        oscillations_error = abs(max_allowed_oscillations - total_oscillations)
+        return WEIGHTS[0] * hover_error + WEIGHTS[1] * velocity_error + WEIGHTS[2] * oscillations_error
+    
+    best_error = callback(p)
+    
+    while sum(dp) > 0.001:
+        for i in range(len(p)):
+            p[i] += dp[i]
+            error = callback(p)
+            if error < best_error:
+                best_error = error
+                dp[i] *= 1.1
+            else:
+                p[i] -= 2*dp[i]
+                error = callback(p)
+                if error < best_error:
+                    best_error = error
+                    dp[i] *= 1.1
+                else:
+                    p[i] += dp[i]
+                    dp[i] *= 0.9
 
     # Create dicts to pass the parameters to run_callback
-    thrust_params = {'tau_p': params[0], 'tau_d': params[1], 'tau_i': params[2]}
+    thrust_params = {'tau_p': p[0], 'tau_d': p[1], 'tau_i': p[2]}
 
     # If tuning roll, then also initialize gain values for roll PID controller
-    roll_params   = {'tau_p': 0, 'tau_d': 0, 'tau_i': 0}
+    roll_params   = {'tau_p': p[3], 'tau_d': p[4], 'tau_i': p[5]}
 
-    # Call run_callback, passing in the dicts of thrust and roll gain values
-    hover_error, max_allowed_velocity, drone_max_velocity, max_allowed_oscillations, total_oscillations = run_callback(thrust_params, roll_params, VISUALIZE=VISUALIZE)
+    # # Call run_callback, passing in the dicts of thrust and roll gain values
+    # hover_error, max_allowed_velocity, drone_max_velocity, max_allowed_oscillations, total_oscillations = run_callback(thrust_params, roll_params, VISUALIZE=VISUALIZE)
 
-    # Calculate best_error from above returned values
-    best_error = None
+    # # Calculate best_error from above returned values
+    # best_error = None
 
     # Implement your code to use twiddle to tune the params and find the best_error
 
@@ -208,5 +333,5 @@ def find_parameters_with_roll(run_callback, tune='both', DEBUG=False, VISUALIZE=
 
 def who_am_i():
     # Please specify your GT login ID in the whoami variable (ex: jsmith224).
-    whoami = ''
+    whoami = 'nnegash6'
     return whoami

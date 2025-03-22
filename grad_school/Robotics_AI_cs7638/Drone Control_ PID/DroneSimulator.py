@@ -172,6 +172,7 @@ class DroneSimulator:
                         
                 except Exception as e:
                     print("There is an error in the pid_thrust function.", e)
+                    print(traceback.format_exc())
                     self.runtime_error = True
                     break
                 
