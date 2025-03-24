@@ -22,6 +22,27 @@ if OUTPUT_UNIQUE_FILE_ID:
     print(f'Unique file ID: {file_hash}')
 
 
+MOVES = {
+        'n': (-1, 0),
+        's': (1, 0),
+        'e': (0, 1),
+        'w': (0, -1),
+        'ne': (-1, 1),
+        'nw': (-1, -1),
+        'se': (1, 1),
+        'sw': (1, -1)
+    }
+COST = {
+    'n': 2,
+    's': 2,
+    'e': 2,
+    'w': 2,
+    'ne': 3,
+    'nw': 3,
+    'se': 3,
+    'sw': 3
+    }
+
 class DeliveryPlanner_PartA:
     """
     Note: All print outs must be conditioned on the debug parameter.
@@ -58,16 +79,52 @@ class DeliveryPlanner_PartA:
         You may not change the function signature for it.
         All print outs must be conditioned on the debug flag.
         """
+        # print("dorpzone_location: ", self.dropzone_location)
+        # print("todo: ", self.todo)
+        # print("box_locations: ", self.box_locations)
+        
+        curr_loc = self.dropzone_location
+        uncollected_boxes = [box for box in self.todo]
+        moves = []
+        print("init_loc: ", curr_loc)
+        for box in self.todo:
+            print("**********FOR BOX ", box, "**********")
+            box_loc = self.box_locations[box]
+            new_curr_loc, path = find_path(curr_loc, box_loc, self.warehouse_viewer, uncollected_boxes)
+            if path is not None:
+                for move in path:
+                    moves.append('move ' + move)
+            if new_curr_loc is not None:
+                curr_loc = new_curr_loc
+            moves.append('lift ' + box)
+            uncollected_boxes.pop(0)
+            print("curr_loc: ", curr_loc)
+            print("path: ", path)
+            #TODO: THIS NEEDS TO JUST RETRASE THE PATH TO THE DROPZONE *****
+            # ***** ONLY SHOULD FIND PATH TO DROPZONE AGAIN IF THE ORIGINAL PATH IS NONE *****
+            new_curr_loc, path = find_path(curr_loc, self.dropzone_location, self.warehouse_viewer, uncollected_boxes)
+            if path is not None:
+                for move in path:
+                    moves.append('move ' + move)
+            if new_curr_loc is not None:
+                curr_loc = new_curr_loc
+            moves.append('down ' + direction_to_drop(curr_loc, self.dropzone_location))
+            print("curr_loc: ", curr_loc)
+            print("path: ", path)
+            
+        
+        print("moves: ", moves)
+            
 
         # The following is the hard coded solution to test case 1
-        moves = ['move w',
-                 'move nw',
-                 'lift 1',
-                 'move se',
-                 'down e',
-                 'move ne',
-                 'lift 2',
-                 'down s']
+        # moves = ['move w',
+        #          'move nw',
+        #          'lift 1',
+        #          'move se',
+        #          'down e',
+        #          'move ne',
+        #          'lift 2',
+        #          'down s']
 
         if debug:
             for i in range(len(moves)):
@@ -283,9 +340,63 @@ class DeliveryPlanner_PartC:
 
 def who_am_i():
     # Please specify your GT login ID in the whoami variable (ex: jsmith125).
-    whoami = ''
+    whoami = 'nnegash6'
     return whoami
 
+def find_path(init_loc, box_loc, vewier, boxes, debug=False):
+    queue = []
+    visited = set(init_loc)
+    expanded = {}
+    queue.append((0 + euclidean_distance(init_loc, box_loc), 0, init_loc[0], init_loc[1]))
+    
+    while len(queue) > 0:
+        queue.sort()
+        f, cost, x, y = queue.pop(0)
+        for move, delta in MOVES.items():
+            new_x, new_y = x + delta[0], y + delta[1]
+            if (new_x, new_y) == box_loc:
+                return (x,y), calculate_path(expanded, (x,y), init_loc)
+            if (new_x, new_y) not in visited and vewier[new_x][new_y] not in  ['#'] + boxes:
+                if expanded.get((new_x, new_y)) is None:
+                    expanded[(new_x, new_y)] = move
+                visited.add((new_x, new_y))
+                queue.append((cost + COST[move] + euclidean_distance((new_x, new_y), box_loc), cost + COST[move], new_x, new_y))
+    return None, None
+
+def calculate_path(expanded, curr_loc, init_loc):
+    print("expanded: ", expanded)
+    path = []
+    curr = curr_loc
+    while curr_loc != init_loc:
+        path.append(expanded[curr_loc])
+        curr_loc = get_prev_loc(curr_loc, expanded[curr_loc])
+    path.reverse()
+    # print("path: ", path)
+    return path
+
+def get_prev_loc(curr_loc, move):
+    reverse = {
+        'n': 's',
+        's': 'n',
+        'e': 'w',
+        'w': 'e',
+        'ne': 'sw',
+        'nw': 'se',
+        'se': 'nw', 
+        'sw': 'ne'
+    }
+    new_x, new_y = curr_loc[0] + MOVES[reverse[move]][0], curr_loc[1] + MOVES[reverse[move]][1]
+    return (new_x, new_y)
+
+def direction_to_drop(curr_loc, dropzone):
+    for move, delta in MOVES.items():
+        new_x, new_y = curr_loc[0] + delta[0], curr_loc[1] + delta[1]
+        if (new_x, new_y) == dropzone:
+            return move
+
+def euclidean_distance(loc1, loc2):
+    return math.sqrt((loc1[0] - loc2[0]) ** 2 + (loc1[1] - loc2[1]) ** 2)
+    # return abs(loc1[0] - loc2[0]) + abs(loc1[1] - loc2[1])
 
 if __name__ == "__main__":
     """

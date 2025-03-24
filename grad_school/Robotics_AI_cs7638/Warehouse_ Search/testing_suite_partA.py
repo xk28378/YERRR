@@ -44,12 +44,12 @@ TEST_MODE = False
 # which could result in a timeout, but useful for debugging
 # Note that enabling this will also enable DEBUGGING_SINGLE_PROCESS
 ########################################################################
-VISUALIZE_FLAG = False
+VISUALIZE_FLAG = True
 
 ########################################################################
 # For debugging set the time limit to a big number (like 600 or more)
 ########################################################################
-TIME_LIMIT = 5  # seconds
+TIME_LIMIT = 500  # seconds
 
 ########################################################################
 # If your debugger does not handle multiprocess debugging very easily
