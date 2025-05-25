@@ -9,7 +9,7 @@
 #
 ######################################################################
 
-VISUALIZE = True
+VISUALIZE = False
 VISUALIZE_TWIDDLE = False
 
 if VISUALIZE or VISUALIZE_TWIDDLE:
