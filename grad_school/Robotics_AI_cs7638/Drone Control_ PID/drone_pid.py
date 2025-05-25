@@ -9,6 +9,7 @@
 #
 ######################################################################
 
+WEIGHTS = [0.82, 0.13, 0.05]
 
 def pid_thrust(target_elevation, drone_elevation, tau_p=0, tau_d=0, tau_i=0, data: dict() = {}):
     '''
@@ -123,11 +124,10 @@ def find_parameters_thrust(run_callback, tune='thrust', DEBUG=False, VISUALIZE=F
     dp = [1.,1.,0.]
     
     def callback(p):
-        weights = [0.85, 0.1, 0.05]
         hover_error, max_allowed_velocity, drone_max_velocity, max_allowed_oscillations, total_oscillations = run_callback(thrust_params= {'tau_p': p[0], 'tau_d': p[1], 'tau_i': p[2]})
-        velocity_error = max(drone_max_velocity-max_allowed_velocity, 0)
-        oscillations_error = max(total_oscillations-max_allowed_oscillations, 0)
-        return weights[0] * hover_error + weights[1] * velocity_error + weights[2] * oscillations_error
+        velocity_error = abs(max_allowed_velocity - drone_max_velocity)
+        oscillations_error = abs(max_allowed_oscillations - total_oscillations)
+        return WEIGHTS[0] * hover_error + WEIGHTS[1] * velocity_error + WEIGHTS[2] * oscillations_error
     
     best_error = callback(p)
     
@@ -197,16 +197,14 @@ def find_parameters_with_int(run_callback, tune='thrust', DEBUG=False, VISUALIZE
     dp = [1.,1.,1.]
 
     def callback(p):
-        weights = [0.49, 0.49, 0.02]
         hover_error, max_allowed_velocity, drone_max_velocity, max_allowed_oscillations, total_oscillations = run_callback(thrust_params= {'tau_p': p[0], 'tau_d': p[1], 'tau_i': p[2]})
-        velocity_error = max(drone_max_velocity-max_allowed_velocity, 0)
-        oscillations_error = max(total_oscillations-max_allowed_oscillations, 0)
-        # print("hover_error", hover_error, "velocity_error", velocity_error, "oscillations_error", oscillations_error)
-        return weights[0] * hover_error + weights[1] * velocity_error + weights[2] * oscillations_error
+        velocity_error = abs(max_allowed_velocity - drone_max_velocity)
+        oscillations_error = abs(max_allowed_oscillations - total_oscillations)
+        return WEIGHTS[0] * hover_error + WEIGHTS[1] * velocity_error + WEIGHTS[2] * oscillations_error
 
     best_error = callback(p)
 
-    while sum(dp) > 0.0001:
+    while sum(dp) > 0.001:
         for i in range(len(p)):
             p[i] += dp[i]
             error = callback(p)
@@ -222,7 +220,7 @@ def find_parameters_with_int(run_callback, tune='thrust', DEBUG=False, VISUALIZE
                 else:
                     p[i] += dp[i]
                     dp[i] *= 0.9
-        # print("best error", best_error)
+
     # Create dicts to pass the parameters to run_callback
     thrust_params = {'tau_p': p[0], 'tau_d': p[1], 'tau_i': p[2]}
 
@@ -290,13 +288,11 @@ def find_parameters_with_roll(run_callback, tune='both', DEBUG=False, VISUALIZE=
     p = [0.,0.,0.,0.,0.,0.]
     dp = [1.,1.,0.,1.,1.,0.]
     
-    def callback(p, verbose=False):
-        weights = [.48, .48, 0.04]
+    def callback(p):
         hover_error, max_allowed_velocity, drone_max_velocity, max_allowed_oscillations, total_oscillations = run_callback(thrust_params= {'tau_p': p[0], 'tau_d': p[1], 'tau_i': p[2]}, roll_params= {'tau_p': p[3], 'tau_d': p[4], 'tau_i': p[5]})
-        velocity_error = max(drone_max_velocity-max_allowed_velocity, 0)
-        oscillations_error = max(total_oscillations-max_allowed_oscillations, 0)
-        if verbose: print("hover_error", hover_error, "velocity_error", velocity_error, "oscillations_error", oscillations_error)
-        return weights[0] * hover_error + weights[1] * velocity_error + weights[2] * oscillations_error
+        velocity_error = abs(max_allowed_velocity - drone_max_velocity)
+        oscillations_error = abs(max_allowed_oscillations - total_oscillations)
+        return WEIGHTS[0] * hover_error + WEIGHTS[1] * velocity_error + WEIGHTS[2] * oscillations_error
     
     best_error = callback(p)
     
@@ -322,7 +318,7 @@ def find_parameters_with_roll(run_callback, tune='both', DEBUG=False, VISUALIZE=
 
     # If tuning roll, then also initialize gain values for roll PID controller
     roll_params   = {'tau_p': p[3], 'tau_d': p[4], 'tau_i': p[5]}
-    callback(p, verbose=True)
+
     # # Call run_callback, passing in the dicts of thrust and roll gain values
     # hover_error, max_allowed_velocity, drone_max_velocity, max_allowed_oscillations, total_oscillations = run_callback(thrust_params, roll_params, VISUALIZE=VISUALIZE)
 
